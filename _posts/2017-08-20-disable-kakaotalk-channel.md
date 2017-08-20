@@ -6,6 +6,7 @@ categories: IT
 ---
 
 클리앙의 [카카오톡 채널 탭 삭제하기](https://www.clien.net/service/board/lecture/11099227) 를 보고 작성.
+
 대상: 안드로이드 폰. 
 아이폰은 테스트 해보지 않음. 아마 안 될 거 같다.
 
