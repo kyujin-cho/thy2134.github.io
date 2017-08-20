@@ -10,8 +10,15 @@ categories: IT
 1. [AdGuard](https://adguard.com/en/welcome.html) 설치
     - 플레이 스토어 버전이 아니라 해당 페이지에서 다운받은 버전이어야 한다.
     - 애드가드는 유료 소프트웨어이며, 루블화를 통해 결제를 할 경우 1년 2천원대, 평생 6천원대의 가격으로 사용할 수 있다고 한다. 자세한 건 꺼무위키에...
-2. 설정 - 유저 필터 로 이동
-3. 상단의 3점 메뉴를 누르고 불러오기 
-4. `https://gist.githubusercontent.com/thy2134/229d09e75f2171e410b1a400e7195277/raw/3bd9278a538cbe71b96e28cfd8a18236b02ccbf0/kakao_channel_filter.txt`
+2. 하단의 'GET ADGUARD PREMIUM'을 눌러 라이센스 등록.
+3. 등록 후, 메인 화면의 전원 버튼을 눌러 차단 활성화. 
+    - 애드가드는 VPN을 이용하여 트래픽을 선별적으로 차단하는 방식이므로 VPN 권한 활성화가 필요하다.
+4. 설정 - 유저 필터 로 이동
+5. 상단의 3점 메뉴를 누르고 불러오기 
+6. `https://gist.githubusercontent.com/thy2134/229d09e75f2171e410b1a400e7195277/raw/3bd9278a538cbe71b96e28cfd8a18236b02ccbf0/kakao_channel_filter.txt`
 해당 링크를 붙여넣기 
-5. 필터가 정상적으로 불러와졌는지 확인
+7. 필터가 정상적으로 불러와졌는지 확인
+8. 카카오톡 앱 재설치
+    - 당연히 데이터가 날라가기 때문에 백업 후 재설치 필수
+9. ?????
+10. PROFIT!!!
