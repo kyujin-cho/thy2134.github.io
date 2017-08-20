@@ -23,7 +23,7 @@ categories: IT
 4. 설정 - 유저 필터 로 이동.
 5. 상단의 3점 메뉴를 누르고 불러오기 선택.
 ![Step 6](https://thy2134.github.io/static/images/Screenshot_20170820-153720.png)
-6. `https://gist.githubusercontent.com/thy2134/229d09e75f2171e410b1a400e7195277/raw/3bd9278a538cbe71b96e28cfd8a18236b02ccbf0/kakao_channel_filter.txt`
+6. `https://gist.githubusercontent.com/thy2134/229d09e75f2171e410b1a400e7195277/raw/f0a7f7b1397d74c2ae9d8438236eae9f8847d784/kakao_channel_filter.txt`
 해당 링크를 붙여넣기 
 ![Step 7](https://thy2134.github.io/static/images/Screenshot_20170820-153725.png)
 7. 필터가 정상적으로 불러와졌는지 확인
