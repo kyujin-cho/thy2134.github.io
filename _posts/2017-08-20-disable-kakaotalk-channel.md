@@ -5,10 +5,9 @@ date:   2017-08-20 15:30:00 +0900
 categories: IT
 ---
 
-클리앙의 [카카오톡 채널 탭 삭제하기](https://www.clien.net/service/board/lecture/11099227) 를 보고 작성.
-
-대상: 안드로이드 폰. 
-아이폰은 테스트 해보지 않음. 아마 안 될 거 같다.
+클리앙의 [카카오톡 채널 탭 삭제하기](https://www.clien.net/service/board/lecture/11099227) 를 보고 작성.  
+대상: 안드로이드 폰.  
+아이폰은 테스트 해보지 않음. 아마 안 될 거 같다.  
 
 1. [AdGuard](https://adguard.com/en/welcome.html) 설치
     - 플레이 스토어 버전이 아니라 해당 페이지에서 다운받은 버전이어야 한다.
