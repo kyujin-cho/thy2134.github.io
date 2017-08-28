@@ -5,7 +5,14 @@ date:   2017-08-28 20:15:00 +0900
 categories: IT
 ---
 
-1. [다음의 링크]('window.external.AddFavorite('javascript:for(var imgs=document.querySelectorAll("img[data-original]"),i=0;i<imgs.length;i++)imgs[i].setAttribute("src","https:"+imgs[i].getAttribute("data-original"));', document.title);')로 접속.
-2. macOS일 경우 Cmd + D, 윈도우/Linux일 경우 Ctrl+D를 눌러 브라우저 즐겨찾
-2. 이미지를 다운로드 받아야 할 때 방금 추가한 즐겨찾기를 한번 눌러줌.
-3. 이미지 다운로드 가능.
+1. [다음의 링크](http://static.r3mark.xyz/add_bookmark.html)로 접속.
+![1](/static/images/Screen Shot 2017-08-28 at 11.01.54 PM.png)
+![2](/static/images/Screen Shot 2017-08-28 at 11.02.12 PM.png)
+2. 브라우저의 북마크 바를 열어준다. macOS에서는 Cmd + Shift + B, Windows/Linux에서는 Ctrl + Shift + B를 통해 열 수 있다.
+![3](/static/images/Screen Shot 2017-08-28 at 11.06.24 PM.png)
+3. 1의 링크에 있는 'SVG 제거기' 버튼을 방금 연 북마크 바에 드래그해서 추가하자.
+4. 다운로드 하고 싶은 이미지가 있는 나무위키 페이지에서 추가한 북마크를 눌러주면 다운로드 가능.   
+![4](/static/images/Screen Shot 2017-08-28 at 11.08.08 PM.png)
+(Before)
+![4](/static/images/Screen Shot 2017-08-28 at 11.09.30 PM.png)
+(After)
