@@ -15,7 +15,7 @@ macOS High Sierra 업뎃 이후로 BB Blend/Link가 작동하지 않아 찾은 �
 
 4. Password 설정 후, Identification on Network로 접근하여 본인의 BB의 이름과 Username을 확인한다.
 
-5. macOS Finder에서 Cmd + K를 눌러 서버 접속 다이얼로그를 연 후, 주소창에 smb://<BB 이름>을 넣고 연결을 누른다.
+5. macOS Finder에서 Cmd + K를 눌러 서버 접속 다이얼로그를 연 후, 주소창에 smb://\<BB 이름\>을 넣고 연결을 누른다.
 
 6. 4에서 확인한 Username과 3에서 설정한 Password를 입력하고 연결을 누른다.
 
