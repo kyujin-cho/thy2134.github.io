@@ -45,8 +45,9 @@ videoplayer.vevo.com
 
 4. 레포지토리로 이동 후, `python dnsproxy.py -o haproxy` 를 실행하여 설정 파일을 생성한다. 생성한 설정 파일은 output/ 폴더에 위치해 있다. 
 5. 프록시 서버에 SSH로 연결한다.
-6. 다음 명령을 실행하여 HAProxy를 설치한다.
-```apt-get update -qq && apt-get install -y software-properties-common
+6. 다음 명령을 실행하여 HAProxy를 설치한다.    
+```
+apt-get update -qq && apt-get install -y software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-1.5
 apt-get update -qq && apt-get install -y haproxy
 ```
