@@ -32,7 +32,6 @@ Amazon Prime Video의 예시. Amazon Prime Video는 `https://atv-ps.amazon.com/c
 2. Python이 설치된 네임서버 역할을 할 컴퓨터. 라즈베리 파이 정도면 충분하다. DD-WRT가 설치된 공유기도 된다. 영상을 컴퓨터에서 보려면 굳이 없어도 된다. 
 3. 기초적인 Linux / 네트워크 지식 
 
-- 설치
 1. 작업을 할 컴퓨터에서 `https://github.com/jamiees2/dnsproxy` 레포지토리를 clone 한다.
 2. proxies/proxies-us.json을 열어 해당 도메인이 포함된 Dictionary를 지운다. 응답하지 않는 도메인이므로, 그냥 놔두면 에러를 일으킨다.
 ```
