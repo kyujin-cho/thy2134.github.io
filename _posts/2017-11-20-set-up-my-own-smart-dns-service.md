@@ -26,11 +26,14 @@ Amazon Prime Video의 예시. Amazon Prime Video는 `https://atv-ps.amazon.com/c
 
 이렇게 되는 것.    
 
-그럼 실제로 구축해보자.    
+인증 구간 하나만 캡쳐해서 프록시 서버로 던져버리는거라 VPN에 비해 속도 문제가 거의 없기 때문에, 미국 VOD 서비스를 보기 위해 많이들 쓰는 방식이다.    
+단점은... 비싸다는거 -_-    
+대강 한달에 10불 정도 한다.    
+프라임 끊느라 1년에 50불을 내는데 영상 보려고 10불을 또 낼수는 없으니, 남는 VPS에 실제로 구축해보기로 했다.       
 
 - 준비물    
 1. 프록시 서버 역할을 할, Ubuntu가 설치된 미국 내에 위치한 VPS. 사양은 512MB 램이면 충분하다.
-2. Python이 설치된 네임서버 역할을 할 컴퓨터. 라즈베리 파이 정도면 충분하다. DD-WRT가 설치된 공유기도 된다. 영상을 컴퓨터에서 보려면 굳이 없어도 된다. 
+2. Python2가 설치된 네임서버 역할을 할 컴퓨터. 라즈베리 파이 정도면 충분하다. DD-WRT가 설치된 공유기도 된다. 영상을 컴퓨터에서 보려면 굳이 없어도 된다. 
 3. 기초적인 Linux / 네트워크 지식 
 
 1. 작업을 할 컴퓨터에서 `https://github.com/jamiees2/dnsproxy` 레포지토리를 clone 한다.
@@ -66,5 +69,7 @@ apt-get update -qq && apt-get install -y haproxy
 ![Image](https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_2.png?raw=true)       
 적용 후    
 
-16. 영상이 재생된다. 만세! 
+16. 영상이 재생된다. 만세!     
 
+PS) 이걸 해보자고 결심한게 VPN을 통해 Youtube TV로 NCAA Football PO를 보고 나서인데, 정작 이걸 써도 Youtube TV는 작동하지 않는다. ㅡㅡ     
+다른 방법 연구가 필요할 듯.    
