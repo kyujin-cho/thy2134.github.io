@@ -5,6 +5,8 @@ date: 2017-11-20 18:00:00 +0900
 categories: IT
 ---
 
+이 글은 [해당 Github Repo](https://github.com/jamiees2/dnsproxy) 를 거의 대부분 참고하여 작성
+
 미국 Amazon Prime Video 서비스에는 지역락이 걸려있어서, 미국을 제외한 지역에서는 시청할 수 없다. Netflix, Hulu, 기타 등등 수많은 VOD/Live TV 서비스들 역시 비슷한 방식의 지역락을 걸고 있다.   
 보통 지역락을 걸기 위해서는, 유저가 서비스에 접속할 때 서버에 특정 요청을 보내 유저의 IP가 재생 가능 지역에 속해 있는지 아닌지를 서버가 판단하는 방식을 취한다.    
 ![Image](https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_3.png?raw=true)    
@@ -73,3 +75,4 @@ apt-get update -qq && apt-get install -y haproxy
 
 PS) 이걸 해보자고 결심한게 VPN을 통해 Youtube TV로 NCAA Football PO를 보고 나서인데, 정작 이걸 써도 Youtube TV는 작동하지 않는다. ㅡㅡ     
 다른 방법 연구가 필요할 듯.    
+PS2) XBox 360 / PS3 / Bravia TV및 BDP / 옛 삼성 TV의 경우에는 이 방식을 지원하지 않아, DNAT 방식으로 설정해야 한다고 한다. 설정방법은 해당 레포 Wiki에 있으니 알아서 잘...
