@@ -18,7 +18,7 @@ email: kyujin.cho@r3mark.xyz
 description: > # this means to ignore newlines until "baseurl:"
   Blahblah
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.r3mark.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: No21_Herrera
 github_username:  thy2134
 
