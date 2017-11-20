@@ -69,7 +69,7 @@ apt-get update -qq && apt-get install -y haproxy
 ![Image](https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_2.png?raw=true)       
 적용 후    
 
-16. 영상이 재생된다. 만세!     
+영상이 재생된다. 만세!     
 
 PS) 이걸 해보자고 결심한게 VPN을 통해 Youtube TV로 NCAA Football PO를 보고 나서인데, 정작 이걸 써도 Youtube TV는 작동하지 않는다. ㅡㅡ     
 다른 방법 연구가 필요할 듯.    
