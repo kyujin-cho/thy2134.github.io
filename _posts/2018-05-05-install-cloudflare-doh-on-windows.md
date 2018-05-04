@@ -33,7 +33,7 @@ Address:  121.189.57.82
 2. CMD를 "관리자 권한"으로 열어준다.
 3. CMD에서 파일이 저장된 폴더(여기서는 C:\Cloudflared) 로 이동한다.
 4. `cloudflared service install` 을 실행한다. 정상적으로 서비스가 설치되었으면 `INFO[0000] Installing Argo Tunnel Windows service` 라는 메세지가 나온다.
-5. 이제 탐색기를 열고, C:\Windows\System32\config\systemprofile 폴더로 이동한다.
+5. 이제 탐색기를 열고, `C:\Windows\System32\config\systemprofile` 폴더로 이동한다.
 6. `.cloudflared` 폴더를 생성한다.
 7. 메모장을 열고, 다음 내용을 붙여넣는다.    
     ```
