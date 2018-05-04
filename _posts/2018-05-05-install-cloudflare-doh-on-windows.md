@@ -9,7 +9,6 @@ categories: IT
 ```nslookup bamtoki.com
 Server:  1dot1dot1dot1.cloudflare-dns.com
 Address:  1.1.1.1
-
 Name:    bamtoki.com
 Address:  121.189.57.82```
 다음은 DNS 오염을 이용한 서버 차단의 예시이다. `nslookup` 명령어를 통해 대표적인 불법 웹툰 사이트인 `bamtoki.com`의 IP를 질의했더니, 원래 IP가 아닌 이상한 IP가 튀어나온다.   
