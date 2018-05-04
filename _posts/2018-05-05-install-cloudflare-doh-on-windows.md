@@ -48,16 +48,4 @@ Address:  121.189.57.82
 11. `Argo tunnel agent` 서비스를 찾아서 시작한다.
 12. 컴퓨터의 DNS를 127.0.0.1로 변경한다.
 13. CMD에서 `nslookup bamtoki.com` 을 입력해, 위의 결과가 아닌 다른 결과가 나오면 성공.    
-예시:     
-```
-$ nslookup bamtoki.com
-Server:  localhost
-Address:  127.0.0.1
-
-Non-authoritative answer:
-Name:    bamtoki.com
-Addresses:  2400:cb00:2048:1::6817:8513
-          2400:cb00:2048:1::6817:8613
-          104.23.133.19
-          104.23.134.19
-```
+![1](/static/images/Argo_1.png)  
