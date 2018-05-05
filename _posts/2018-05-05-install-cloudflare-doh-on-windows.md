@@ -36,11 +36,12 @@ Address:  121.189.57.82
 5. 이제 탐색기를 열고, `C:\Windows\System32\config\systemprofile` 폴더로 이동한다.
 6. `.cloudflared` 폴더를 생성한다.
 7. 메모장을 열고, 다음 내용을 붙여넣는다.    
-
-`proxy-dns: true`    
-`proxy-dns-upstream:`    
-`    - https://1.1.1.1/dns-query`    
-`    - https://1.0.0.1/dns-query`     
+    ```
+    proxy-dns: true    
+    proxy-dns-upstream:     
+        - https://1.1.1.1/dns-query    
+        - https://1.0.0.1/dns-query
+    ```    
 8. 파일을 `config.yml` 이라는 이름으로 바탕 화면에 저장한다.
 9. 저장한 파일을 방금 생성한 `.cloudflared` 폴더 안에 집어넣는다.
 10. 시작+R 을 누르고 services.msc를 입력 후 엔터.
