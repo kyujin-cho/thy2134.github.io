@@ -31,7 +31,7 @@ Address:  121.189.57.82
 0. `brew install cloudflare/cloudflare/cloudflared` 로 cloudflared를 설치한다.
 1. `cd ~/`로 유저 폴더로 이동한다.
 2. `mkdir .cloudflared` 로 cloudflared 설정 파일이 들어갈 폴더를 생성한다.
-3. `cd .cloudflared` 한 후, vi 등으로 `config.yml` 파일을 만든다. 내용은 다음과 같이 채워야 한다. 
+3. `cd .cloudflared` 한 후, vi 등으로 `config.yml` 파일을 만든다. 내용은 다음과 같이 채워야 한다.     
 ```    
 proxy-dns: true    
 proxy-dns-upstream:    
