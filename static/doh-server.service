@@ -1,0 +1,21 @@
+[Unit]
+Description=DNS over HTTPS Server 
+Requires=After=network.target
+
+[Service]
+ExecStart=/usr/bin/npm start
+# Required on some systems
+WorkingDirectory=/home/ubuntu/dns-over-https
+Restart=always
+ # Restart service after 10 seconds if node service crashes
+ RestartSec=10
+ # Output to syslog
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=doh-server
+#User=<alternate user>
+#Group=<alternate group>
+#Environment=NODE_ENV=production PORT=81
+
+[Install]
+WantedBy=multi-user.target
