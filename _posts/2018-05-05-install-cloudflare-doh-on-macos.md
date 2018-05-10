@@ -31,13 +31,7 @@ Address:  121.189.57.82
 0. `brew install cloudflare/cloudflare/cloudflared` 로 cloudflared를 설치한다.
 1. `cd ~/`로 유저 폴더로 이동한다.
 2. `mkdir .cloudflared` 로 cloudflared 설정 파일이 들어갈 폴더를 생성한다.
-3. `cd .cloudflared` 한 후, vi 등으로 `config.yml` 파일을 만든다. 내용은 다음과 같이 채워야 한다. 
-```    
-proxy-dns: true    
-proxy-dns-upstream:    
-    - https://1.1.1.1/dns-query    
-    - https://1.0.0.1/dns-query      
-```
+3. `cd .cloudflared` 한 후, vi 등으로 `config.yml` 파일을 만든다. 내용은 [Windows 버전](/it/2018/05/04/install-cloudflare-doh-on-windows.html)을 참조한다.
 4. `sudo cloudflared service install` 로 cloudflared 서비스를 설치한다.
 5. `sudo launchctl start com.cloudflare.cloudflared` 로 cloudflared 데몬을 실행한다.
 6. `sudo lsof -i UDP:53` 명령어로 cloudflared 데몬이 제대로 돌아가고 있는지 확인한다. 
