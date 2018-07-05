@@ -191,7 +191,7 @@ Workspace 폴더에 압축 해제한 BIOS FW 파일을 투하.
 
 -   Non-K CPU만 박아야 한다. 안그러면 CPU 수명이 단축될 수 있다고.
 
--   B/H 칩셋에서는 i7의 HT가 제대로 지원되지 않는다고 한다.
+-   B/H 칩셋에서는 i7의 Turbo Boost가 제대로 지원되지 않는다고 한다.
 
 -   ASUS 및 일부 애자락 보드의 경우 Windows에서 돌아가는 FW Update Tool이 아니라
     CH341A ROM Writer를 이용해서 수동으로 ROM을 올려야 한다. ROM Writer의
