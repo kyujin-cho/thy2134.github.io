@@ -40,7 +40,7 @@ Workspace 폴더에 압축 해제한 BIOS FW 파일을 투하.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/e9111853c8737f2ca01d2f043e6dae73.png)
 
--   UBU v1.69.11 fix 폴더에 MMTool.exe를 실행 Load Image를 누르고, Workspace
+-   UBU v1.69.11 fix 폴더에 MMTool.exe를 실행 -> Load Image를 누르고, Workspace
     폴더에서 압축 해제한 FW 파일을 선택.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/e39d97216bfec501e7bd7c3776c31f26.png)
@@ -64,11 +64,11 @@ Workspace 폴더에 압축 해제한 BIOS FW 파일을 투하.
 
 -   CFL 폴더의 Intel BMP.exe를 실행. Ctrl-O를 눌러 파일 열기 창을 띄운 후,
     Binary Data File에는 방금 추출한 vbios.dat, BMP Script File은 `VBIOS and
-    BSF\\SKLKBL\\1046\\skl_1046.bsf` 파일 선택.
+    BSF/SKLKBL/1046/skl_1046.bsf` 파일 선택.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/00c6f6963ebb2645d81f73fef6559c19.png)
 
--   파일이 열리면, 상단 메뉴의 BIOS Settings Save all…을 누르고, Workspace
+-   파일이 열리면, 상단 메뉴의 BIOS Settings-> Save all…을 누르고, Workspace
     폴더에 transfer라는 이름으로 저장.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/db0f8582585f7617e30025b2b9b77e7e.png)
@@ -79,22 +79,22 @@ Workspace 폴더에 압축 해제한 BIOS FW 파일을 투하.
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/9ec6a15b9e43b56e21d648330c8f89d7.png)
 
 -   BMP에서 다시 Ctrl-O로 파일 열기 창을 띄운 후, 이번에는 `VBIOS and
-    BSF\\SKLKBL\\1046\\skl_1046.dat`와 `VBIOS and
-    BSF\\SKLKBL\\1046\\skl_1046.bsf`를 선택.
+    BSF/SKLKBL/1046/skl_1046.dat`와 `VBIOS and
+    BSF/SKLKBL/1046/skl_1046.bsf`를 선택.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/68a4ad64243e8a4c7a0767b5c44ca6f5.png)
 
--   BIOS Settings Apply All… 을 선택 후, 방금 수정한 transfer.ssf를 선택하여
+-   BIOS Settings-> Apply All… 을 선택 후, 방금 수정한 transfer.ssf를 선택하여
     패치를 진행.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/bc735d3bc8ecafd08665ddcba9d6364b.png)
 
--   패치가 완료되면, FileSave As…를 눌러 Workspace 폴더에 new_vbios.dat 파일로
+-   패치가 완료되면, File-> Save As…를 눌러 Workspace 폴더에 new_vbios.dat 파일로
     저장.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/1268bddf94466ae4014a0e730a574d60.png)
 
--   BMP를 닫고, UBU v1.69.11 fix 폴더의 UEFITool.exe를 열고, FileOpen으로 BIOS
+-   BMP를 닫고, UBU v1.69.11 fix 폴더의 UEFITool.exe를 열고, File-> Open으로 BIOS
     FW 파일을 오픈.
 
 ![](https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/00e743898d8812feb2e18264d28b404a.png)
@@ -185,9 +185,9 @@ Workspace 폴더에 압축 해제한 BIOS FW 파일을 투하.
 
 1.  기타
 
--   i5 이상일 경우,
+-   i5 이상의 CPU일 경우,
     <http://www.hwbattle.com/bbs/board.php?bo_table=cpumbram&wr_id=112671> 를
-    참고해서 CPU에 절연 및 은박신공을 해야 한다.
+    참고해서 CPU 접점에 절연 및 은박신공을 해야 한다.
 
 -   Non-K CPU만 박아야 한다. 안그러면 CPU 수명이 단축될 수 있다고.
 
