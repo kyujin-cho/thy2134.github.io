@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let someArr = [1,2,3,4,5]
+        window.onload = () => {
+            document.getElementById('arrval').textContent = someArr.join()
+        }
+        function doReverse() {
+            someArr.reverse()
+        }
+        function refresh() {
+            window.location.reload()
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="doReverse()">Reverse Array</button>
+    </div>
+    <div><button onclick="refresh()">Refresh page</button></div>
+    <div>
+        Current Value: <span id="arrval"></span>
+    </div>
+</body>
+</html>
