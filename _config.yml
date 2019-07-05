@@ -14,13 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: My Blog
-email: kyujin.cho@r3mark.xyz
+email: thy2134@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blahblah
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.r3mark.xyz" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: No21_Herrera
-github_username:  thy2134
+twitter_username: YeogieTextInput
+github_username:  kyujin-cho
 
 # Build settings
 markdown: kramdown
