@@ -22,4 +22,4 @@ S10 계열 기기가 없어서 테스트는 못해봤으나, 특정 프로그램
 ===
 - 주석
     - *: 해당 ZIP 파일에는 암호가 걸려있다...
-    - **: <CSC>에는 Provider별 CSC를 입력. 한국의 경우, SKT: SKT, KT: KTC, LG U+: LUC, 자급제: KOO
+    - **: <CSC>에는 Provider별 CSC를 입력. 한국의 경우, SKT: SKC, KT: KTC, LG U+: LUC, 자급제: KOO
