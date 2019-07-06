@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://blog.r3mark.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.r3mark.xyz/" rel="alternate" type="text/html" /><updated>2019-07-06T14:01:03+09:00</updated><id>https://blog.r3mark.xyz/</id><title type="html">My Blog</title><subtitle>Blahblah
+</subtitle><entry><title type="html">S10 계열 갤럭시 CSC 변경</title><link href="https://blog.r3mark.xyz/it/2019/07/05/galaxy-s10-change-csc.html" rel="alternate" type="text/html" title="S10 계열 갤럭시 CSC 변경" /><published>2019-07-05T17:30:00+09:00</published><updated>2019-07-05T17:30:00+09:00</updated><id>https://blog.r3mark.xyz/it/2019/07/05/galaxy-s10-change-csc</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2019/07/05/galaxy-s10-change-csc.html">&lt;p&gt;S10 계열 기기가 없어서 테스트는 못해봤으나, 특정 프로그램 + UART의 조합으로 EIF Command를 입력할 수 있다는 모 카페에서의 게시글이 올라와서 해당 Method를 하나의 게시글로 정리해 보았다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;준비물
+    &lt;ol&gt;
+      &lt;li&gt;USB Type-C UART Cable&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://androidfilehost.com/?fid=1322778262904004227&quot;&gt;SGKTEif 프로그램&lt;/a&gt; &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;변경방법
+    &lt;ol&gt;
+      &lt;li&gt;UART 케이블과 Windows 컴퓨터를 연결&lt;/li&gt;
+      &lt;li&gt;SGKTEif 실행
+  &lt;img src=&quot;https://raw.githubusercontent.com/kyujin-cho/thy2134.github.io/master/static/images/CSC_1.png&quot; alt=&quot;CSC_1.png&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Port에 단말기가 올라오는지 체크 후 OPEN&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AT&lt;/code&gt; 입력 후 SEND =&amp;gt; Ok가 리턴되어야 함&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AT+preconfig=2,&amp;lt;CSC&amp;gt;&lt;/code&gt; 입력 후 SEND =&amp;gt; Ok가 리턴되어야 함 &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+      &lt;li&gt;재부팅&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;해당 ZIP 파일에는 암호가 걸려있다… &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;CSC&gt;에는 Provider별 CSC를 입력. 한국의 경우, SKT: SKC, KT: KTC, LG U+: LUC, 자급제: KOO
+&lt;/CSC&gt;
+      &lt;p&gt;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">S10 계열 기기가 없어서 테스트는 못해봤으나, 특정 프로그램 + UART의 조합으로 EIF Command를 입력할 수 있다는 모 카페에서의 게시글이 올라와서 해당 Method를 하나의 게시글로 정리해 보았다. 준비물 USB Type-C UART Cable SGKTEif 프로그램 1 변경방법 UART 케이블과 Windows 컴퓨터를 연결 SGKTEif 실행 Port에 단말기가 올라오는지 체크 후 OPEN AT 입력 후 SEND =&amp;gt; Ok가 리턴되어야 함 AT+preconfig=2,&amp;lt;CSC&amp;gt; 입력 후 SEND =&amp;gt; Ok가 리턴되어야 함 2 재부팅 해당 ZIP 파일에는 암호가 걸려있다… &amp;#8617; 에는 Provider별 CSC를 입력. 한국의 경우, SKT: SKC, KT: KTC, LG U+: LUC, 자급제: KOO &amp;#8617;</summary></entry><entry><title type="html">ASUS B150M-A 마더보드에 커피레이크 CPU 설치기 (진행중)</title><link href="https://blog.r3mark.xyz/it/2018/07/05/asus-b150-coffelake-patch.html" rel="alternate" type="text/html" title="ASUS B150M-A 마더보드에 커피레이크 CPU 설치기 (진행중)" /><published>2018-07-05T10:30:00+09:00</published><updated>2018-07-05T10:30:00+09:00</updated><id>https://blog.r3mark.xyz/it/2018/07/05/asus-b150-coffelake-patch</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2018/07/05/asus-b150-coffelake-patch.html">&lt;p&gt;&lt;a href=&quot;https://blog.naver.com/vivamus09/221300782204&quot;&gt;모 네이버 블로그&lt;/a&gt; 를 참고하여
+진행하였다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;준비물:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;CFL.zip:
+&lt;a href=&quot;https://drive.google.com/file/d/16yNTMfTyBOujTuFKIQeJHQAidJ_GYnUg/edit&quot;&gt;https://drive.google.com/file/d/16yNTMfTyBOujTuFKIQeJHQAidJ_GYnUg/edit&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pcie-patcher: 출처의 patcher1.4.zip&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;HxD: &lt;a href=&quot;https://mh-nexus.de/en/hxd/&quot;&gt;https://mh-nexus.de/en/hxd/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;마더보드 BIOS ROM: v11.7.x.1xxx 이하의 ME 버전이어야 함 17’ 10월 이전
+Release FW면 가능할듯.&lt;br /&gt;
+난
+&lt;a href=&quot;http://dlcdnet.asus.com/pub/ASUS/mb/LGA1151/B150M-A/B150M-A-ASUS-3402.zip&quot;&gt;v3402&lt;/a&gt;로
+진행.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;압축 해제&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/3874fd0df88d898d1a2033d8a5ef2156.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이중 Patcher 1.4는 PCIe Patcher, Workspace는 임의 생성한 폴더(앞으로 작업물들이
+저장될 공간)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/6709c2a6c5a255d084d779c2b38c2cf7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Workspace 폴더에 압축 해제한 BIOS FW 파일을 투하.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;VBIOS 업데이트&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/aad546befc07ff7a100e3324a54bc73b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/e9111853c8737f2ca01d2f043e6dae73.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;UBU v1.69.11 fix 폴더에 MMTool.exe를 실행 -&amp;gt; Load Image를 누르고, Workspace
+폴더에서 압축 해제한 FW 파일을 선택.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/e39d97216bfec501e7bd7c3776c31f26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/b2adcdcc4674bef08a04b4ad6d852b9b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;파일 로드가 완료되면, Option ROM 탭을 선택 후 Browse를 누르고, vbios.dat 을
+File name에 입력 후 Open&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/292facbb79b57f553a2ba4f0d04e4770.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;목록에서 Device ID가 406인 줄 선택, Option ROM 항목에서 Extract ~ 선택,
+Apply 누르면 VBIOS 추출 끝.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/7868f2623bb67ed81dc00f475b921b70.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MMTool 창을 그대로 유지한 채, 탐색기를 통해 Workspace 폴더로 이동하여
+vbios.dat 파일이 생성되었음을 체크.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/349a3669e88c4eb468fca9eaa3895e42.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CFL 폴더의 Intel BMP.exe를 실행. Ctrl-O를 눌러 파일 열기 창을 띄운 후,
+Binary Data File에는 방금 추출한 vbios.dat, BMP Script File은 &lt;code class=&quot;highlighter-rouge&quot;&gt;VBIOS and
+BSF/SKLKBL/1046/skl_1046.bsf&lt;/code&gt; 파일 선택.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/00c6f6963ebb2645d81f73fef6559c19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;파일이 열리면, 상단 메뉴의 BIOS Settings-&amp;gt; Save all…을 누르고, Workspace
+폴더에 transfer라는 이름으로 저장.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/db0f8582585f7617e30025b2b9b77e7e.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;저장된 파일을 텍스트 편집기로 열고, STRING $SignOn 이라는 문구를 찾아서
+해당 문구로 시작하는 줄을 지운 후 저장.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/9ec6a15b9e43b56e21d648330c8f89d7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BMP에서 다시 Ctrl-O로 파일 열기 창을 띄운 후, 이번에는 &lt;code class=&quot;highlighter-rouge&quot;&gt;VBIOS and
+BSF/SKLKBL/1046/skl_1046.dat&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;VBIOS and
+BSF/SKLKBL/1046/skl_1046.bsf&lt;/code&gt;를 선택.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/68a4ad64243e8a4c7a0767b5c44ca6f5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BIOS Settings-&amp;gt; Apply All… 을 선택 후, 방금 수정한 transfer.ssf를 선택하여
+패치를 진행.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/bc735d3bc8ecafd08665ddcba9d6364b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;패치가 완료되면, File-&amp;gt; Save As…를 눌러 Workspace 폴더에 new_vbios.dat 파일로
+저장.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/1268bddf94466ae4014a0e730a574d60.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BMP를 닫고, UBU v1.69.11 fix 폴더의 UEFITool.exe를 열고, File-&amp;gt; Open으로 BIOS
+FW 파일을 오픈.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/00e743898d8812feb2e18264d28b404a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ctrl-F 를 눌러 Search 창을 띄우고, GUID 탭으로 이동 후, 아까 MMTool의 선택한
+줄에 있던 Section GUID를 입력하고 검색. 앞에 두 자리까지만 입력해도 잘
+찾아지는듯?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/cc30f51dbc814e40f8e33e73e25351be.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;입력한 GUID Pattern에 매치되는 항목이 있으면 밑에 메세지가 뜬다. 이 메세지를
+더블 클릭하여 해당 항목으로 이동.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/80c2bd6aa45d2bc6e46a576c8dad2285.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;해당 항목을 선택하고, Ctrl-Shift-R을 눌러 아까 저장한 new_vbios.dat을 선택.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/c4c9f8f8d556b5c2ea3ffd2fb27b7bee.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;이제 Ctrl-S를 눌러 after-vBIOS-patch.cap으로 저장.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/97e98f9a96f3be6ee2921e1e9c969e26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;생성한 파일을 열거냐는 메세지인데, No를 누르고 UEFITool을 닫아 버리자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/30172418f7a3832f91ea5cce0640a569.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Workspace 폴더에 after-vBIOS-patch.cap 파일이 있는지 체크 후, 이 파일을 UBU
+v1.69.11 fix 폴더로 복사.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;BIOS 마이크로코드 패치&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/7d8913a79c5ad551799afb30fe0db8fb.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;UBU 폴더의 UBU.bat 파일을 관리자 권한으로 실행하면, 똑똑하게도 폴더에 있는
+바이오스 파일을 자동으로 찾아서 분해해 준다. 밑의 멘트가 나올때까지
+기다리고, 모든 작업이 끝나면 아무 키나 눌러서 진행.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/0557515f8712a7a80cddb11d2168dfc8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;21 테크로 EFI GOP Driver 패치.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/92912e94338fe07cf075d8258e7408ae.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;7을 눌러 마이크로코드 업데이트 모드로 진행.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/35814da6929629970939606051eb8426.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;첫째는 72&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/1e9c2b2593e08d02ba38133ae88535f5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;둘째는 BE&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/7c011e51fa53495243f93b0a5a780cd0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;패치중…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/fecc3fc969fd94710e848116921e1bc7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;패치끝.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/9c81ded24436a347720456c6a3f2f2b2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;01 테크로 파일 저장. 이후 엔터키 누르면 종료.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/8726182075982e5dcf81a9499592b511.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;전에 없던 B15A4.cap이 생긴 걸 볼 수 있다. Workspace 폴더로 옮겨 주자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/b5d7a8c770b84413c4656699a680d055.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Patcher 1.4 폴더를 Powershell에서 열어주자(Shift-RClick 후 Open PS window
+here)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/d30dfea3b9c0295d2babd39eeb186bcb.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./pcie_patcher.cmd ../Workspace/B15A4.CAP&lt;/code&gt; 명령으로 패치.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/9c49863adca3628bd6ecf31811127c01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;패치끝. 밑의 오류는 신경 쓸 필요 없다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/46ec8ac62701aac69b985f07425e2660.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Workspace 폴더에 B15A4.CAP.patched 파일이 생성됐음을 볼 수 있다. 이것이
+완성본.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;기타&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;i5 이상의 CPU일 경우,
+&lt;a href=&quot;http://www.hwbattle.com/bbs/board.php?bo_table=cpumbram&amp;amp;wr_id=112671&quot;&gt;http://www.hwbattle.com/bbs/board.php?bo_table=cpumbram&amp;amp;wr_id=112671&lt;/a&gt; 를
+참고해서 CPU 접점에 절연 및 은박신공을 해야 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Non-K CPU만 박아야 한다. 안그러면 CPU 수명이 단축될 수 있다고.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;B/H 칩셋에서는 i7의 Turbo Boost가 제대로 지원되지 않는다고 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ASUS 및 일부 애자락 보드의 경우 Windows에서 돌아가는 FW Update Tool이 아니라
+CH341A ROM Writer를 이용해서 수동으로 ROM을 올려야 한다. ROM Writer의
+사용법은
+&lt;a href=&quot;http://gall.dcinside.com/board/view/?id=pridepc_new3&amp;amp;no=7795125&quot;&gt;컴갤&lt;/a&gt;에
+&lt;a href=&quot;http://gall.dcinside.com/board/view/?id=pridepc_new3&amp;amp;no=7795139&quot;&gt;자세히&lt;/a&gt;
+정리되어 있다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;만약 당신의 보드에 BIOS Chip이 납땜되어 있다면, SOP8 Clip과 점퍼 F-F
+케이블을 이용하여 ROM Writer에 연결해야 한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;1에서 언급한 1046이라는 숫자는 보드 SKL에 따라 다를 수 있다. 내 보드가
+B150M-A가 아닐 경우에는 맨 위 출처를 참고하여 숫자를 알아내자.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">모 네이버 블로그 를 참고하여 진행하였다.</summary></entry><entry><title type="html">DNS over HTTPS 서버를 직접 만들어 보자</title><link href="https://blog.r3mark.xyz/it/2018/05/10/diy-doh-server.html" rel="alternate" type="text/html" title="DNS over HTTPS 서버를 직접 만들어 보자" /><published>2018-05-10T12:00:00+09:00</published><updated>2018-05-10T12:00:00+09:00</updated><id>https://blog.r3mark.xyz/it/2018/05/10/diy-doh-server</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2018/05/10/diy-doh-server.html">&lt;ol&gt;
+  &lt;li&gt;호옥시나, 그럴일은 없겠지만, 정부가 무식하게 DoH 지원하는 Resolver들을 막아버리면(…) 어쩔까 하는 생각에 작성하는 글이다.&lt;/li&gt;
+  &lt;li&gt;준비물:
+    &lt;ul&gt;
+      &lt;li&gt;DNS 검열을 받지 않는 지역(일본이던, 미국이던, …)에 존재하는 Linux 서버. 꼭 리눅스가 아니어도 되지만, 내가 설명하기 편하니까…&lt;/li&gt;
+      &lt;li&gt;이러한 지식에 대한 기초적인 이해&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;먼저, DoH 서버를 올릴 컴퓨터로 접속해서 &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/hardillb/dns-over-https&lt;/code&gt; 를 클론 한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd dns-over-https&lt;/code&gt; 후, &lt;code class=&quot;highlighter-rouge&quot;&gt;./mkCert.sh $(curl ipconfig.io)&lt;/code&gt; 를 이용해 Self-Signed Certificate를 만든다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; 하던, &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn install&lt;/code&gt; 하던… 취향에 맞는 Package Manager로 Dependency들을 설치한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm start&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn start&lt;/code&gt; 등으로 서버를 실행하면 된다. DoH는 443을 이용해 통신하므로, 방화벽에서 443 포트를 당연히 열어줘야지.&lt;/li&gt;
+  &lt;li&gt;근데 이렇게만 만들어 놓으면 터미널 세션을 나가버리면 서버가 꺼지니까, systemd를 이용해 데몬화 시켜주자.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/static/doh-server.service&quot;&gt;Systemd Script&lt;/a&gt;를 다운받아서 &lt;code class=&quot;highlighter-rouge&quot;&gt;/lib/systemd/system&lt;/code&gt; 에 저장한다. 귀찮으면 걍 &lt;code class=&quot;highlighter-rouge&quot;&gt;cd /lib/systemd/system; sudo wget https://blog.r3mark.xyz/static/doh-server.service&lt;/code&gt; 로 해결.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo vi /lib/systemd/system/doh-server.service&lt;/code&gt; 로 열어서, &lt;code class=&quot;highlighter-rouge&quot;&gt;WorkingDirectory=&lt;/code&gt; 뒤의 경로를 Git Repo가 저장된 경로로 바꿔주고 &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;로 저장한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo systemctl daemon-reload&lt;/code&gt; 후, &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo service doh-server start&lt;/code&gt; 하면 서비스가 실행된다.&lt;/li&gt;
+  &lt;li&gt;서버 설정은 다 끝났으나, 아직 할 일이 남았다. 우리가 만든 TLS용 Cert는 Self-Signed이기 때문에, Client에서 바로 접속하려 하면 Cert가 올바르게 Sign되지 않았다고 에러를 뱉으므로… Cert를 미리 컴퓨터에 설치해야 한다.
+    &lt;ul&gt;
+      &lt;li&gt;먼저, 터미널에서 Repo 폴더에 저장된 &lt;code class=&quot;highlighter-rouge&quot;&gt;server.crt&lt;/code&gt; 파일을 찾아 컴퓨터에 미리 저장해 두어야 한다.&lt;/li&gt;
+      &lt;li&gt;Windows에서는&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Win+R키로 실행 창을 띄우고, mmc.exe를 입력 후 엔터를 친다.&lt;/li&gt;
+      &lt;li&gt;Ctrl+M을 누르고, 왼쪽의 Available Snap-ins에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;Certificates (Local Computer)&lt;/code&gt;를 찾아서 클릭 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;Add &amp;gt;&lt;/code&gt; 를 누른다.&lt;/li&gt;
+      &lt;li&gt;OK를 눌러 창을 닫는다.&lt;/li&gt;
+      &lt;li&gt;이제 &lt;code class=&quot;highlighter-rouge&quot;&gt;Console Root&lt;/code&gt; 밑에 &lt;code class=&quot;highlighter-rouge&quot;&gt;Certificates (Local Computer)&lt;/code&gt; 가 추가되었다. 더블 클릭 후, &lt;code class=&quot;highlighter-rouge&quot;&gt;Trusted People &amp;gt; Certificates&lt;/code&gt; 순으로 접근한다.&lt;/li&gt;
+      &lt;li&gt;우측의 빈 공간을 우클릭 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;All Tasks &amp;gt; Import&lt;/code&gt; 를 눌러 인증서를 추가한다.&lt;/li&gt;
+      &lt;li&gt;Next 후, &lt;code class=&quot;highlighter-rouge&quot;&gt;File to Import&lt;/code&gt; 창이 나오면 다운받아 두었던 &lt;code class=&quot;highlighter-rouge&quot;&gt;server.crt&lt;/code&gt; 를 선택하고, Next를 누른다.&lt;/li&gt;
+      &lt;li&gt;다시 Next를 누르면 인증서가 불러와 져 있다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이제, 이전 게시글(&lt;a href=&quot;/it/2018/05/04/install-cloudflare-doh-on-windows.html&quot;&gt;Windows&lt;/a&gt;, &lt;a href=&quot;/it/2018/05/04/install-cloudflare-doh-on-macos.html&quot;&gt;macOS&lt;/a&gt;)을 참조하여 DoH Client를 설정한다. 이때, Config.yml을 작성하는 부분에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;https://1.1.1.1/dns-query&lt;/code&gt; 대신 &lt;code class=&quot;highlighter-rouge&quot;&gt;https://(서버 IP)/query&lt;/code&gt; 를 적어 준다.&lt;/li&gt;
+  &lt;li&gt;끝!&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">호옥시나, 그럴일은 없겠지만, 정부가 무식하게 DoH 지원하는 Resolver들을 막아버리면(…) 어쩔까 하는 생각에 작성하는 글이다. 준비물: DNS 검열을 받지 않는 지역(일본이던, 미국이던, …)에 존재하는 Linux 서버. 꼭 리눅스가 아니어도 되지만, 내가 설명하기 편하니까… 이러한 지식에 대한 기초적인 이해 먼저, DoH 서버를 올릴 컴퓨터로 접속해서 https://github.com/hardillb/dns-over-https 를 클론 한다. cd dns-over-https 후, ./mkCert.sh $(curl ipconfig.io) 를 이용해 Self-Signed Certificate를 만든다. npm install 하던, yarn install 하던… 취향에 맞는 Package Manager로 Dependency들을 설치한다. npm start, yarn start 등으로 서버를 실행하면 된다. DoH는 443을 이용해 통신하므로, 방화벽에서 443 포트를 당연히 열어줘야지. 근데 이렇게만 만들어 놓으면 터미널 세션을 나가버리면 서버가 꺼지니까, systemd를 이용해 데몬화 시켜주자. Systemd Script를 다운받아서 /lib/systemd/system 에 저장한다. 귀찮으면 걍 cd /lib/systemd/system; sudo wget https://blog.r3mark.xyz/static/doh-server.service 로 해결. sudo vi /lib/systemd/system/doh-server.service 로 열어서, WorkingDirectory= 뒤의 경로를 Git Repo가 저장된 경로로 바꿔주고 :wq로 저장한다. sudo systemctl daemon-reload 후, sudo service doh-server start 하면 서비스가 실행된다. 서버 설정은 다 끝났으나, 아직 할 일이 남았다. 우리가 만든 TLS용 Cert는 Self-Signed이기 때문에, Client에서 바로 접속하려 하면 Cert가 올바르게 Sign되지 않았다고 에러를 뱉으므로… Cert를 미리 컴퓨터에 설치해야 한다. 먼저, 터미널에서 Repo 폴더에 저장된 server.crt 파일을 찾아 컴퓨터에 미리 저장해 두어야 한다. Windows에서는 Win+R키로 실행 창을 띄우고, mmc.exe를 입력 후 엔터를 친다. Ctrl+M을 누르고, 왼쪽의 Available Snap-ins에서 Certificates (Local Computer)를 찾아서 클릭 후 Add &amp;gt; 를 누른다. OK를 눌러 창을 닫는다. 이제 Console Root 밑에 Certificates (Local Computer) 가 추가되었다. 더블 클릭 후, Trusted People &amp;gt; Certificates 순으로 접근한다. 우측의 빈 공간을 우클릭 후 All Tasks &amp;gt; Import 를 눌러 인증서를 추가한다. Next 후, File to Import 창이 나오면 다운받아 두었던 server.crt 를 선택하고, Next를 누른다. 다시 Next를 누르면 인증서가 불러와 져 있다. 이제, 이전 게시글(Windows, macOS)을 참조하여 DoH Client를 설정한다. 이때, Config.yml을 작성하는 부분에서 https://1.1.1.1/dns-query 대신 https://(서버 IP)/query 를 적어 준다. 끝!</summary></entry><entry><title type="html">Windows에 Cloudflare DNS와 DNS on HTTPS 연결을 해주는 Authoritative Name Server 설치하기</title><link href="https://blog.r3mark.xyz/it/2018/05/05/install-cloudflare-doh-on-windows.html" rel="alternate" type="text/html" title="Windows에 Cloudflare DNS와 DNS on HTTPS 연결을 해주는 Authoritative Name Server 설치하기" /><published>2018-05-05T01:00:00+09:00</published><updated>2018-05-05T01:00:00+09:00</updated><id>https://blog.r3mark.xyz/it/2018/05/05/install-cloudflare-doh-on-windows</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2018/05/05/install-cloudflare-doh-on-windows.html">&lt;p&gt;2018년 5월 4일부로, 문화체육관광부가 DNS 쿼리 오염을 통한 불법 사이트 차단을 시작했다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nslookup bamtoki.com    
+Server:  1dot1dot1dot1.cloudflare-dns.com    
+Address:  1.1.1.1    
+Name:    bamtoki.com    
+Address:  121.189.57.82
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음은 DNS 오염을 이용한 서버 차단의 예시이다. &lt;code class=&quot;highlighter-rouge&quot;&gt;nslookup&lt;/code&gt; 명령어를 통해 대표적인 불법 웹툰 사이트인 &lt;code class=&quot;highlighter-rouge&quot;&gt;bamtoki.com&lt;/code&gt;의 IP를 질의했더니, 원래 IP가 아닌 이상한 IP가 튀어나온다. &lt;br /&gt;
+그리고 해당 IP는,&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nslookup www.warning.or.kr    
+Server:  localhost    
+Address:  127.0.0.1    
+Non-authoritative answer:    
+Name:    www.warning.or.kr    
+Address:  121.189.57.82
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;짜잔. 무려 &lt;code class=&quot;highlighter-rouge&quot;&gt;warning.or.kr&lt;/code&gt;에 엮인 IP다.  &lt;br /&gt;
+정부가 특정 사이트에 대한 DNS 질의를 무단으로 가로채서 변조 후 전송한다는 뜻이다. &lt;br /&gt;
+하지만 방패가 있으면 창이 있으니, 얼마 전에 발표한 Cloudflare의 DNS와 함께 발표된 Argo Tunnel을 이용해 쉽게 DNS 연결을 암호화 할 수 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;32-bit 컴퓨터는 &lt;a href=&quot;https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-windows-386.zip&quot;&gt;이곳&lt;/a&gt;, 64-bit 컴퓨터는 &lt;a href=&quot;https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-windows-amd64.zip&quot;&gt;이곳&lt;/a&gt; 에서 cloudflared 실행 파일이 담긴 zip 파일을 다운로드 받는다.&lt;/li&gt;
+  &lt;li&gt;다운로드 받은 cloudflared.exe를 적당한 곳에 압축 풀어준다. 이 예시에서는 C:\Cloudflared\cloudflared.exe로 하겠다.&lt;/li&gt;
+  &lt;li&gt;CMD를 “관리자 권한”으로 열어준다.&lt;/li&gt;
+  &lt;li&gt;CMD에서 파일이 저장된 폴더(여기서는 C:\Cloudflared) 로 이동한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cloudflared service install&lt;/code&gt; 을 실행한다. 정상적으로 서비스가 설치되었으면 &lt;code class=&quot;highlighter-rouge&quot;&gt;INFO[0000] Installing Argo Tunnel Windows service&lt;/code&gt; 라는 메세지가 나온다.&lt;/li&gt;
+  &lt;li&gt;이제 탐색기를 열고, &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Windows\System32\config\systemprofile&lt;/code&gt; 폴더로 이동한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.cloudflared&lt;/code&gt; 폴더를 생성한다.&lt;/li&gt;
+  &lt;li&gt;메모장을 열고, 다음 내용을 붙여넣는다.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; proxy-dns: true    
+ proxy-dns-upstream:     
+     - https://1.1.1.1/dns-query    
+     - https://1.0.0.1/dns-query
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;파일을 &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt; 이라는 이름으로 바탕 화면에 저장한다.&lt;/li&gt;
+  &lt;li&gt;저장한 파일을 방금 생성한 &lt;code class=&quot;highlighter-rouge&quot;&gt;.cloudflared&lt;/code&gt; 폴더 안에 집어넣는다.&lt;/li&gt;
+  &lt;li&gt;시작+R 을 누르고 services.msc를 입력 후 엔터.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Argo tunnel agent&lt;/code&gt; 서비스를 찾아서 시작한다.&lt;/li&gt;
+  &lt;li&gt;컴퓨터의 DNS를 127.0.0.1로 변경한다.&lt;/li&gt;
+  &lt;li&gt;CMD에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;nslookup bamtoki.com&lt;/code&gt; 을 입력해, 위의 결과가 아닌 다른 결과가 나오면 성공.  &lt;br /&gt;
+&lt;img src=&quot;/static/images/Argo_1.png&quot; alt=&quot;1&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">2018년 5월 4일부로, 문화체육관광부가 DNS 쿼리 오염을 통한 불법 사이트 차단을 시작했다. $ nslookup bamtoki.com Server: 1dot1dot1dot1.cloudflare-dns.com Address: 1.1.1.1 Name: bamtoki.com Address: 121.189.57.82</summary></entry><entry><title type="html">macOS에 Cloudflare DNS와 DNS on HTTPS 연결을 해주는 Authoritative Name Server 설치하기</title><link href="https://blog.r3mark.xyz/it/2018/05/05/install-cloudflare-doh-on-macos.html" rel="alternate" type="text/html" title="macOS에 Cloudflare DNS와 DNS on HTTPS 연결을 해주는 Authoritative Name Server 설치하기" /><published>2018-05-05T01:00:00+09:00</published><updated>2018-05-05T01:00:00+09:00</updated><id>https://blog.r3mark.xyz/it/2018/05/05/install-cloudflare-doh-on-macos</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2018/05/05/install-cloudflare-doh-on-macos.html">&lt;p&gt;2018년 5월 4일부로, 문화체육관광부가 DNS 쿼리 오염을 통한 불법 사이트 차단을 시작했다.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nslookup bamtoki.com    
+Server:  1dot1dot1dot1.cloudflare-dns.com    
+Address:  1.1.1.1    
+Name:    bamtoki.com    
+Address:  121.189.57.82
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음은 DNS 오염을 이용한 서버 차단의 예시이다. &lt;code class=&quot;highlighter-rouge&quot;&gt;nslookup&lt;/code&gt; 명령어를 통해 대표적인 불법 웹툰 사이트인 &lt;code class=&quot;highlighter-rouge&quot;&gt;bamtoki.com&lt;/code&gt;의 IP를 질의했더니, 원래 IP가 아닌 이상한 IP가 튀어나온다. &lt;br /&gt;
+그리고 해당 IP는,&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nslookup www.warning.or.kr    
+Server:  localhost    
+Address:  127.0.0.1    
+Non-authoritative answer:    
+Name:    www.warning.or.kr    
+Address:  121.189.57.82
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;짜잔. 무려 &lt;code class=&quot;highlighter-rouge&quot;&gt;warning.or.kr&lt;/code&gt;에 엮인 IP다.  &lt;br /&gt;
+정부가 특정 사이트에 대한 DNS 질의를 무단으로 가로채서 변조 후 전송한다는 뜻이다. &lt;br /&gt;
+하지만 방패가 있으면 창이 있으니, 얼마 전에 발표한 Cloudflare의 DNS와 함께 발표된 Argo Tunnel을 이용해 쉽게 DNS 연결을 암호화 할 수 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew install cloudflare/cloudflare/cloudflared&lt;/code&gt; 로 cloudflared를 설치한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/&lt;/code&gt;로 유저 폴더로 이동한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir .cloudflared&lt;/code&gt; 로 cloudflared 설정 파일이 들어갈 폴더를 생성한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd .cloudflared&lt;/code&gt; 한 후, vi 등으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt; 파일을 만든다. 내용은 &lt;a href=&quot;/it/2018/05/04/install-cloudflare-doh-on-windows.html&quot;&gt;Windows 버전&lt;/a&gt;을 참조한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo cloudflared service install&lt;/code&gt; 로 cloudflared 서비스를 설치한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo launchctl start com.cloudflare.cloudflared&lt;/code&gt; 로 cloudflared 데몬을 실행한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo lsof -i UDP:53&lt;/code&gt; 명령어로 cloudflared 데몬이 제대로 돌아가고 있는지 확인한다.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+cloudflar 96272 root    3u  IPv4 0xb8aaa9d10728bd67      0t0  UDP *:domain
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이런 식으로 나오면 성공.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dig +short @127.0.0.1 bamtoki.com AAA&lt;/code&gt; 명령어로 Query가 제대로 이루어지는지 체크한다.&lt;/li&gt;
+  &lt;li&gt;macOS의 DNS를 127.0.0.1로 변경한다.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">2018년 5월 4일부로, 문화체육관광부가 DNS 쿼리 오염을 통한 불법 사이트 차단을 시작했다. $ nslookup bamtoki.com Server: 1dot1dot1dot1.cloudflare-dns.com Address: 1.1.1.1 Name: bamtoki.com Address: 121.189.57.82</summary></entry><entry><title type="html">Smart DNS 서버 구축하기</title><link href="https://blog.r3mark.xyz/it/2017/11/20/set-up-my-own-smart-dns-service.html" rel="alternate" type="text/html" title="Smart DNS 서버 구축하기" /><published>2017-11-20T18:00:00+09:00</published><updated>2017-11-20T18:00:00+09:00</updated><id>https://blog.r3mark.xyz/it/2017/11/20/set-up-my-own-smart-dns-service</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2017/11/20/set-up-my-own-smart-dns-service.html">&lt;p&gt;이 글은 &lt;a href=&quot;https://github.com/jamiees2/dnsproxy&quot;&gt;해당 Github Repo&lt;/a&gt; 를 거의 대부분 참고하여 작성&lt;/p&gt;
+
+&lt;p&gt;미국 Amazon Prime Video 서비스에는 지역락이 걸려있어서, 미국을 제외한 지역에서는 시청할 수 없다. Netflix, Hulu, 기타 등등 수많은 VOD/Live TV 서비스들 역시 비슷한 방식의 지역락을 걸고 있다. &lt;br /&gt;
+보통 지역락을 걸기 위해서는, 유저가 서비스에 접속할 때 서버에 특정 요청을 보내 유저의 IP가 재생 가능 지역에 속해 있는지 아닌지를 서버가 판단하는 방식을 취한다.  &lt;br /&gt;
+&lt;img src=&quot;https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_3.png?raw=true&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon Prime Video의 예시. Amazon Prime Video는 &lt;code class=&quot;highlighter-rouge&quot;&gt;https://atv-ps.amazon.com/cdp/catalog/GetPlaybackResources&lt;/code&gt; 에 POST 요청을 보내서, 영상의 정보와 지역락 여부를 가져온다.  &lt;br /&gt;
+이러한 요청을 보내는 과정은 대략 네임서버(혹은 캐시)에서 IP를 땡겨옴-&amp;gt;IP에 요청을 보냄-&amp;gt;전달받음 인데, Smart DNS 서비스는 이 과정을 파고드는 서비스이다.  &lt;br /&gt;
+자체 네임서버를 한 대 두고, 여러 스트리밍 서비스들의 인증 도메인에 연결된 원래 IP를 미국 내의 프록시 서버로 바꿔치기 하는 것이다.  &lt;br /&gt;
+이렇게 되면, 브라우저는 원래 도메인 대신 프록시 서버에 동일한 요청을 보내고, 미국 내의 프록시 서버가 원래 인증 서버에 요청을 보내 그 결과를 사용자의 컴퓨터에 돌려주게 된다.  &lt;br /&gt;
+이 과정에서, 인증 서버는 사용자의 컴퓨터가 한국에 있는 것이 아니라 미국에 있는 것으로 인식하여, 인증을 우회할 수 있는 것이다.
+요약하자면&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;한국에서 일반 네임서버로 도메인의 IP를 질의 =&amp;gt; 인증서버의 IP를 돌려줌&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;돌려준 인증 서버에 요청을 보냄 =&amp;gt; 인증 서버에서는 요청이 미국 바깥에서 온 것으로 판단, 블락   &lt;br /&gt;
+이었던 것이&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;한국에서 특수 네임서버로 도메인의 IP를 질의 =&amp;gt; 인증서버가 아닌 프록시 서버의 IP를 돌려줌&lt;/li&gt;
+  &lt;li&gt;프록시 서버에 요청을 보냄 =&amp;gt; 요청을 받은 미국의 프록시 서버가 미국의 인증 서버에 요청을 보냄&lt;/li&gt;
+  &lt;li&gt;미국의 프록시 서버에서는 요청이 미국 내 서버에서 온 것으로 판단, 허용 및 정보 리턴&lt;/li&gt;
+  &lt;li&gt;리턴받은 정보를 프록시 서버가 다시 한국의 컴퓨터에게 돌려줌&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이렇게 되는 것.&lt;/p&gt;
+
+&lt;p&gt;인증 구간 하나만 캡쳐해서 프록시 서버로 던져버리는거라 VPN에 비해 속도 문제가 거의 없기 때문에, 미국 VOD 서비스를 보기 위해 많이들 쓰는 방식이다.  &lt;br /&gt;
+단점은… 비싸다는거 -_-  &lt;br /&gt;
+대강 한달에 10불 정도 한다.  &lt;br /&gt;
+프라임 끊느라 1년에 50불을 내는데 영상 보려고 10불을 또 낼수는 없으니, 남는 VPS에 실제로 구축해보기로 했다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;준비물
+    &lt;ol&gt;
+      &lt;li&gt;프록시 서버 역할을 할, Ubuntu가 설치된 미국 내에 위치한 VPS. 사양은 512MB 램이면 충분하다.&lt;/li&gt;
+      &lt;li&gt;Python2가 설치된 네임서버 역할을 할 컴퓨터. 라즈베리 파이 정도면 충분하다. DD-WRT가 설치된 공유기도 된다. 영상을 컴퓨터에서 보려면 굳이 없어도 된다.&lt;/li&gt;
+      &lt;li&gt;기초적인 Linux / 네트워크 지식&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;작업을 할 컴퓨터에서 &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/jamiees2/dnsproxy&lt;/code&gt; 레포지토리를 clone 한다.&lt;/li&gt;
+  &lt;li&gt;proxies/proxies-us.json을 열어 해당 도메인이 포함된 Dictionary를 지운다. 응답하지 않는 도메인이므로, 그냥 놔두면 에러를 일으킨다.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;token.dramafever.com
+htmltvui-api.netflix.com
+mvid.yql.yahoo.com
+videoplayer.vevo.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;이후에, 레포의 config-sample.json을 config.json으로 변경 후 public_ip 항목을 VPS의 IP로 변경한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;레포지토리로 이동 후, &lt;code class=&quot;highlighter-rouge&quot;&gt;python dnsproxy.py -o haproxy&lt;/code&gt; 를 실행하여 설정 파일을 생성한다. 생성한 설정 파일은 output/ 폴더에 위치해 있다.&lt;/li&gt;
+  &lt;li&gt;프록시 서버에 SSH로 연결한다.&lt;/li&gt;
+  &lt;li&gt;다음 명령을 실행하여 HAProxy를 설치한다.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get update -qq &amp;amp;&amp;amp; apt-get install -y software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-1.5
+apt-get update -qq &amp;amp;&amp;amp; apt-get install -y haproxy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;/etc/haproxy/haproxy.cfg를 haproxy.cfg.old로 이름을 바꾼다.&lt;/li&gt;
+  &lt;li&gt;dnsproxy 폴더 안의 output/haproxy.conf를 /etc/haproxy/haproxy.conf 에 저장한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;service haproxy restart&lt;/code&gt; 로 HAProxy를 재시작한다.&lt;/li&gt;
+  &lt;li&gt;이제 프록시 서버 설정은 끝났다. 다시 작업 컴퓨터로 돌아오자.&lt;/li&gt;
+  &lt;li&gt;작업 컴퓨터에 DNSMasq를 설치한다. 맥은 &lt;a href=&quot;https://gist.github.com/ogrrd/5831371&quot;&gt;링크&lt;/a&gt;를 참고하여, Ubuntu는 &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt install dnsmasq&lt;/code&gt;를 입력하여 설치한다.&lt;/li&gt;
+  &lt;li&gt;맥은 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/etc/dnsmasq.conf&lt;/code&gt;, Ubuntu는 &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/dnsmasq.conf&lt;/code&gt; 를 열어 안의 내용물을 dnsproxy 레포 내의 dnsmasq-haproxy.conf의 내용물로 교체한다.&lt;/li&gt;
+  &lt;li&gt;DNSMasq를 재시작한다.&lt;/li&gt;
+  &lt;li&gt;영상을 시청할 컴퓨터의 인터넷이 들어오는 NIC의 DNS를 방금 DNSMasq를 설치한 컴퓨터의 IP로 바꿔준다. 로컬에 설치했을 경우에는 127.0.0.1, 아니면 알아서 입력한다. 보조 DNS는 ISP의 DNS를 넣어준다. 넣어주지 않으면 인터넷이 안된다.&lt;/li&gt;
+  &lt;li&gt;DNS Cache를 Flush 후 &lt;code class=&quot;highlighter-rouge&quot;&gt;nslookup atv-ps.amazon.com&lt;/code&gt; 명령어를 실행하여 Address 부분이 Proxy Server의 IP Addr로 적용되었는지 체크한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_1.png?raw=true&quot; alt=&quot;Image&quot; /&gt;  &lt;br /&gt;
+적용 전 
+&lt;img src=&quot;https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_2.png?raw=true&quot; alt=&quot;Image&quot; /&gt;     &lt;br /&gt;
+적용 후&lt;/p&gt;
+
+&lt;p&gt;영상이 재생된다. 만세!&lt;/p&gt;
+
+&lt;p&gt;PS) 이걸 해보자고 결심한게 VPN을 통해 Youtube TV로 NCAA Football PO를 보고 나서인데, 정작 이걸 써도 Youtube TV는 작동하지 않는다. ㅡㅡ   &lt;br /&gt;
+다른 방법 연구가 필요할 듯.  &lt;br /&gt;
+PS2) XBox 360 / PS3 / Bravia TV및 BDP / 옛 삼성 TV의 경우에는 이 방식을 지원하지 않아, DNAT 방식으로 설정해야 한다고 한다. 설정방법은 해당 레포 Wiki에 있으니 알아서 잘…&lt;/p&gt;</content><author><name></name></author><summary type="html">이 글은 해당 Github Repo 를 거의 대부분 참고하여 작성</summary></entry><entry><title type="html">macOS에서 BlackBerry Link 없이 BB와 연결하기</title><link href="https://blog.r3mark.xyz/it/2017/10/03/connect-bb-to-macos-with-smb.html" rel="alternate" type="text/html" title="macOS에서 BlackBerry Link 없이 BB와 연결하기" /><published>2017-10-03T16:00:00+09:00</published><updated>2017-10-03T16:00:00+09:00</updated><id>https://blog.r3mark.xyz/it/2017/10/03/connect-bb-to-macos-with-smb</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2017/10/03/connect-bb-to-macos-with-smb.html">&lt;p&gt;macOS High Sierra 업뎃 이후로 BB Blend/Link가 작동하지 않아 찾은 대체 방식이다. BB와 컴퓨터를 SMB로 연결하여 파일을 전송 가능하게 해준다.
+다만 SMB 연결이라 속도가 상당히 느리다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;macOS의 System Pref. -&amp;gt; Network에서 BlackBerry가 연결되는지 확인한다(노란불 들어오면 OK).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;BB의 Settings -&amp;gt; Storage and Access로 접근하여 Access using Wi-Fi 옵션을 활성화해준다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;적절한 Password를 설정한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Password 설정 후, Identification on Network로 접근하여 본인의 BB의 이름과 Username을 확인한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;macOS Finder에서 Cmd + K를 눌러 서버 접속 다이얼로그를 연 후, 주소창에 smb://&amp;lt;BB 이름&amp;gt;을 넣고 연결을 누른다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;4에서 확인한 Username과 3에서 설정한 Password를 입력하고 연결을 누른다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;마운트할 볼륨을 선택한다. media가 내부 저장소, removable_sdcard가 외부 저장소이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;파일을 확인할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Troubleshooting
+    &lt;ol&gt;
+      &lt;li&gt;Network 패널에서 BB가 잡히지 않을 경우
+&lt;a href=&quot;https://github.com/thy2134/thy2134.github.io/blob/files/Drivers.zip?raw=true&quot;&gt;드라이버&lt;/a&gt; 를 설치 후, 재시작해본다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">macOS High Sierra 업뎃 이후로 BB Blend/Link가 작동하지 않아 찾은 대체 방식이다. BB와 컴퓨터를 SMB로 연결하여 파일을 전송 가능하게 해준다. 다만 SMB 연결이라 속도가 상당히 느리다.</summary></entry><entry><title type="html">나무위키의 SVG 이미지를 원래 이미지로 바꿔서 다운로드 받아 보자</title><link href="https://blog.r3mark.xyz/it/2017/08/28/disable-namuwiki-svg.html" rel="alternate" type="text/html" title="나무위키의 SVG 이미지를 원래 이미지로 바꿔서 다운로드 받아 보자" /><published>2017-08-28T20:15:00+09:00</published><updated>2017-08-28T20:15:00+09:00</updated><id>https://blog.r3mark.xyz/it/2017/08/28/disable-namuwiki-svg</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2017/08/28/disable-namuwiki-svg.html">&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://static.r3mark.xyz/add_bookmark.html&quot;&gt;다음의 링크&lt;/a&gt;로 접속.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/images/Screen Shot 2017-08-28 at 11.01.54 PM.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/images/Screen Shot 2017-08-28 at 11.02.12 PM.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;브라우저의 북마크 바를 열어준다. macOS에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Cmd + Shift + B&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Windows/Linux&lt;/code&gt;에서는 Ctrl + Shift + B를 통해 열 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/images/Screen Shot 2017-08-28 at 11.06.24 PM.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;1의 링크에 있는 ‘SVG 제거기’ 버튼을 방금 연 북마크 바에 드래그해서 추가하자.&lt;/li&gt;
+  &lt;li&gt;다운로드 하고 싶은 이미지가 있는 나무위키 페이지에서 추가한 북마크를 눌러주면 다운로드 가능.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/images/Screen Shot 2017-08-28 at 11.08.08 PM.png&quot; alt=&quot;4&quot; /&gt;
+(Before)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/images/Screen Shot 2017-08-28 at 11.09.30 PM.png&quot; alt=&quot;4&quot; /&gt;
+(After)&lt;/p&gt;</content><author><name></name></author><summary type="html">다음의 링크로 접속.</summary></entry><entry><title type="html">카카오톡 채널 기능 차단하기</title><link href="https://blog.r3mark.xyz/it/2017/08/20/disable-kakaotalk-channel.html" rel="alternate" type="text/html" title="카카오톡 채널 기능 차단하기" /><published>2017-08-20T15:30:00+09:00</published><updated>2017-08-20T15:30:00+09:00</updated><id>https://blog.r3mark.xyz/it/2017/08/20/disable-kakaotalk-channel</id><content type="html" xml:base="https://blog.r3mark.xyz/it/2017/08/20/disable-kakaotalk-channel.html">&lt;p&gt;클리앙의 &lt;a href=&quot;https://www.clien.net/service/board/lecture/11099227&quot;&gt;카카오톡 채널 탭 삭제하기&lt;/a&gt; 를 보고 작성.&lt;br /&gt;
+대상: 안드로이드 폰.&lt;br /&gt;
+아이폰은 테스트 해보지 않음. 아마 안 될 거 같다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://adguard.com/en/welcome.html&quot;&gt;AdGuard&lt;/a&gt; 설치
+    &lt;ul&gt;
+      &lt;li&gt;플레이 스토어 버전이 아니라 해당 페이지에서 다운받은 버전이어야 한다.&lt;/li&gt;
+      &lt;li&gt;애드가드는 유료 소프트웨어이며, 루블화를 통해 결제를 할 경우 1년 2천원대, 평생 6천원대의 가격으로 사용할 수 있다고 한다. 자세한 건 꺼무위키에…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://thy2134.github.io/static/images/Screenshot_20170820-153524.png&quot; alt=&quot;Step 2&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;하단의 ‘GET ADGUARD PREMIUM’을 눌러 라이센스 등록.
+&lt;img src=&quot;https://thy2134.github.io/static/images/Screenshot_20170820-153651.png&quot; alt=&quot;Step 3&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;등록 후, 메인 화면의 전원 버튼을 눌러 차단 활성화.
+    &lt;ul&gt;
+      &lt;li&gt;애드가드는 VPN을 이용하여 트래픽을 선별적으로 차단하는 방식이므로 VPN 권한 활성화가 필요하다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://thy2134.github.io/static/images/Screenshot_20170820-153658.png&quot; alt=&quot;Step 4&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;설정 - 유저 필터 로 이동.&lt;/li&gt;
+  &lt;li&gt;상단의 3점 메뉴를 누르고 불러오기 선택.
+&lt;img src=&quot;https://thy2134.github.io/static/images/Screenshot_20170820-153720.png&quot; alt=&quot;Step 6&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;https://gist.githubusercontent.com/thy2134/229d09e75f2171e410b1a400e7195277/raw/f0a7f7b1397d74c2ae9d8438236eae9f8847d784/kakao_channel_filter.txt&lt;/code&gt;
+해당 링크를 붙여넣기 
+&lt;img src=&quot;https://thy2134.github.io/static/images/Screenshot_20170820-153725.png&quot; alt=&quot;Step 7&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;필터가 정상적으로 불러와졌는지 확인&lt;/li&gt;
+  &lt;li&gt;카카오톡 앱 재설치
+    &lt;ul&gt;
+      &lt;li&gt;당연히 데이터가 날라가기 때문에 백업 후 재설치 필수&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://thy2134.github.io/static/images/Screenshot_20170820-153734.png&quot; alt=&quot;Step 9&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;?????&lt;/li&gt;
+  &lt;li&gt;PROFIT!!!  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">클리앙의 카카오톡 채널 탭 삭제하기 를 보고 작성. 대상: 안드로이드 폰. 아이폰은 테스트 해보지 않음. 아마 안 될 거 같다.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="https://blog.r3mark.xyz/jekyll/update/2017/08/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-08-20T15:15:47+09:00</published><updated>2017-08-20T15:15:47+09:00</updated><id>https://blog.r3mark.xyz/jekyll/update/2017/08/20/welcome-to-jekyll</id><content type="html" xml:base="https://blog.r3mark.xyz/jekyll/update/2017/08/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
