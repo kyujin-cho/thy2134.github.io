@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>My blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="My blog">
+<meta property="og:url" content="https://blog.r3mark.xyz/index.html">
+<meta property="og:site_name" content="My blog">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:author" content="Kyujin Cho">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="My blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.r3mark.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-strandhogg-example" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/04/strandhogg-example/" class="article-date">
+  <time datetime="2019-12-03T16:00:00.000Z" itemprop="datePublished">2019-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/04/strandhogg-example/">Android Strandhogg 취약점 구동 예시</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><a href="https://promon.co/security-news/strandhogg/" target="_blank" rel="noopener">StrandHogg</a>란?   </li>
+</ol>
+<ul>
+<li>안드로이드 멀티태스킹의 취약점을 이용해서, 특정 <code>Intent Flag</code>를 가지고 실행된 액티비티가 공격하려는 앱의 액티비티 위에 그려질 수 있는 취약점</li>
+</ul>
+<ol start="2">
+<li>그래서, 어떻게 만드는데?</li>
+</ol>
+<ul>
+<li>아무 액티비티나 하나 생성</li>
+<li>Manifest에 <code>android:allowTaskReparenting=&quot;true&quot;</code> 와 <code>android:taskAffinity=&quot;##공격하려는 앱의 패키지명##&quot;</code> 추가 </li>
+<li>해당 액티비티를 <code>FLAG_ACTIVITY_NEW_TASK</code> 플래그를 붙여 연 후 태스크에 올려놓은 채 홈으로 나옴(백버튼으로 종료하면 안됨)</li>
+<li>런쳐에서 공격하려는 앱 실행</li>
+<li>끝.</li>
+</ul>
+<ol start="3">
+<li>작동 예시   <video src=https://s3.bluehouse.dev/public-bucket/Screen_Recording_20191204-005147.mp4 width=480 height=640 autoplay=false controls=true></video>
+- 취약점 액티비티가 태스크에 없을때의 경우. 아이콘 클릭 시 정상적인 작동(원래 앱으로 이동)을 한다.    
+<video src=https://s3.bluehouse.dev/public-bucket/Screen_Recording_20191204-005251.mp4 width=480 height=640 autoplay=false controls=true></video></li>
+</ol>
+<ul>
+<li>취약점 액티비티를 띄운 후에 공격하려는 앱을 누르는 경우. 원래 액티비티가 아닌 엉뚱한 액티비티가 보여진다.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2019/12/04/strandhogg-example/" data-id="ck4l75qyx000mdge89hv90lzi" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-s10-or-newer-csc-change" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/20/s10-or-newer-csc-change/" class="article-date">
+  <time datetime="2019-09-19T16:00:00.000Z" itemprop="datePublished">2019-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/20/s10-or-newer-csc-change/">S10, 그 이상 기기들의 CSC 변경법 (작동 확인)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>출처: <a href="https://forum.xda-developers.com/galaxy-s10/how-to/change-csc-code-firmware-sim-card-t3907375/post80229026#post80229026" target="_blank" rel="noopener">XDA 어딘가</a>, <a href="https://meeco.kr/mini/25537662" target="_blank" rel="noopener">미니기기 코리아</a></p>
+<ol start="0">
+<li>준비물</li>
+</ol>
+<ul>
+<li>돈(6.6달러 이상)</li>
+<li>이베이 계정</li>
+<li>USB 케이블</li>
+<li>Windows PC</li>
+<li>SKC/KTC/LUC CSC 기기</li>
+</ul>
+<ol>
+<li><p>먼저 <a href="https://www.ebay.com/itm/SAMKEY-CODE-READER-1-CREDITS-INSTANTLY-UNLOCK-SAMSUNG-PHONES-NO-ROOT-NO-FLASH/254275758975" target="_blank" rel="noopener">Ebay</a> 에서 samKEY 크레딧을 구매해야 한다. SamKEY에서 CSC 변경 작업에 부과하는 크레딧은 2크레딧이지만, 해당 셀러의 Min QTY(최소구매갯수)는 3개 이상이다. 그러모로 기기 한대만 바꿀거면 3대, 2대부터는 기기 댓수 * 2개 만큼 구매. 한번 구입한 ID의 크레딧은 여러 컴퓨터/기기에서 돌려 쓸 수 있으므로 공동구매 하는 것도 좋은 선택.</p>
+</li>
+<li><p>구매하고 5분 ~ 24시간 사이에 셀러에게서 이베이 메시지를 통해 구입한 samKEY 계정 정보가 전달된다.<br><img src="/static/images/ScreenShot2019-09-20at1.06.28AM.png" alt="Screenshot 1"></p>
+</li>
+<li><p>이제 윈도우 디펜더의 실시간 스캔 기능을 모조리 꺼버리고, [^1]<br><img src="/static/images/Untitled.png" alt="Screenshot 2"></p>
+</li>
+<li><p>시스템 로케일을 영어 (미국) 으로 변경한 후에 [^2]<br><img src="/static/images/Untitled3.png" alt="Screenshot 3"></p>
+</li>
+<li><p><a href="https://www.samkey.org" target="_blank" rel="noopener">SamKEY 홈페이지</a> 로 이동하여 SamKEY와 Samsung USB Driver를 설치한다.<br><img src="/static/images/ScreenShot2019-09-20at1.12.55AM.png" alt="Screenshot 4"></p>
+</li>
+<li><p>CSC를 변경할 휴대폰의 경우, 먼저 화면 잠금 방식을 스와이프로 변경한 후 [^3]<br><img src="/static/images/photo_2019-09-20_01-13-35.jpg" alt="Screenshot 5"></p>
+</li>
+<li><p>개발자 옵션을 열어 USB 디버깅을 활성화한다.<br><img src="/static/images/photo_2019-09-20_01-13-37.jpg" alt="Screenshot 6"></p>
+</li>
+<li><p>이제 SamKEY를 실행하고,<br><img src="/static/images/Untitled4.png" alt="Screenshot 7"></p>
+</li>
+<li><p>Read Info ADB를 눌러서 기기 정보가 올바르게 뜨는지 확인.<br><img src="/static/images/Untitled5.png" alt="Screenshot 8"><br>이렇게 Unauthorized가 떴을 경우, 휴대전화 화면을 체크하여 컴퓨터 페어링을 허용해주면<br><img src="/static/images/Untitled6.png" alt="Screenshot 9"><br>올바르게 정보가 뜬다.</p>
+</li>
+<li><p>기기 정보가 확인됐으면, 상단의 Username/Password에 지급받은 계정 정보를 넣고 로그인을 누른 다음<br><img src="/static/images/Untitled7.png" alt="Screenshot 10"></p>
+</li>
+<li><p>Change CSC(Buyer) 란에 변경할 세 자리 CSC 코드를 입력 후 Change CSC 클릭. [^4]<br><img src="/static/images/Untitled8.png" alt="Screenshot 11"></p>
+</li>
+<li><p>Yes &amp; Yes<br><img src="/static/images/Untitled9.png" alt="Screenshot 12"><br><img src="/static/images/Untitled10.png" alt="Screenshot 13"></p>
+</li>
+<li><p>진행 중…<br><img src="/static/images/Untitled11.png" alt="Screenshot 14"></p>
+</li>
+<li><p>끝.<br><img src="/static/images/Untitled12.png" alt="Screenshot 15"></p>
+</li>
+<li><p>이제 기기가 재부팅 되면서, 통신사 부트애니가 아닌 자급제의 부트애니가 재생된다.<br><img src="/static/images/photo_2019-09-20_01-18-27.jpg" alt="Screenshot 16"></p>
+</li>
+<li><p>KOO 확인 완료.<br><img src="/static/images/photo_2019-09-20_01-13-38.jpg" alt="Screenshot 17"></p>
+</li>
+</ol>
+<p>[^1]: 망할 디펜더가 SamKEY 클라를 바이러스로 인식하고 검역소로 보내버림.<br>[^2]: 왜인지 모르겠으나, 로케일을 미국으로 두지 않은 채 SamKEY를 켜면 로케일을 변경하라는 메세지가 뜬다.<br>[^3]: 기기가 재부팅 된 후 작업이 진행되는데, 화면 잠금이 걸려 있으면 재부팅 시 USB를 통한 접근이 불가능<br>[^4]: 자급제: KOO, SKT: SKC, KT: KTC, LG U+: LUC</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2019/09/20/s10-or-newer-csc-change/" data-id="ck4l75qyw000jdge82upy2onz" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bx8803-bx112" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/03/bx8803-bx112/" class="article-date">
+  <time datetime="2019-08-02T16:00:00.000Z" itemprop="datePublished">2019-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Flight/">Flight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/03/bx8803-bx112/">BX8803/BX112 탑승기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center>BX 8803</center>
+<center>GMP-PUS</center>
+<center>A321-200 (HL7761)</center>
+<center>29th Jul. 2019</center>
+
+<p>BX의 <a href="https://www.airbusan.com/content/common/customercenter/noticeDetail?id=3376" target="_blank" rel="noopener">수도권보다 저렴한 부산발 국제선 이벤트</a>를 통해 싸게싸게 다녀온 도쿄<br><img src="/static/images/IMG_2332.JPEG" alt="IMG_2332.JPEG"><br>PUS행 첫차인 BX8803을 타기위해 새벽 5시반부터 김포로    </p>
+<p><img src="/static/images/IMG_2333.JPEG" alt="IMG_2333.JPEG"><br>리모델링 덕에 많이 깔끔해진 GMP   </p>
+<p><img src="/static/images/IMG_2336.JPEG" alt="IMG_2336.JPEG"><br>(모바일 탑승권 덕에) 별 의미없는 보딩패스. 영수증이라 딱히 소장하고 싶지도 않고…</p>
+<p><img src="/static/images/IMG_2334.JPEG" alt="IMG_2334.JPEG"><br>탑승수속 3분컷 하고 나오니 반겨주는 오늘의 탑승예정 기체 HL7761. BX임에도 아침차라 그런지 리모트가 아닌 브릿지 당첨. 여담이지만 이게 1박2일 총 4번 탑승동안 유일한 브릿지 탑승…</p>
+<p><img src="/static/images/IMG_2335.JPEG" alt="IMG_2335.JPEG"><br>그 옆엔 법사네 스얼특도 763이 손님 맞을 채비</p>
+<p>대충 구경하다 아아 한잔 사서 위장에 꽂고 탑승완료.</p>
+<p><img src="/static/images/IMG_2337.JPEG" alt="IMG_2337.JPEG"><br>타자마자 이번엔 반대쪽서 반겨주는 법사네 763. 사진을 보아 알겠지만 이날 날씨는 좆나 구렸다.</p>
+<p><img src="/static/images/IMG_2339.JPEG" alt="IMG_2339.JPEG"><br>LCC치고 나름 넓은 32인치의 좌석간 간격.<br>또 대충 풍경 구경하다 보니 이륙준비 끝.   </p>
+<p><img src="/static/images/11115.jpg" alt="11115.jpg"><br>(사진은 펌)<br>기내 안전 방송에 앞서 “승객 여러분, 사랑합니다” 라는 멘트에 맞춰 모든 크루가 이러고 있음;<br>기내 안전 비디오는… 20살 고령의 기재이신 관계로 모니터따위 당연히 없으니 크루가 복도마다 서서 기내안전방송 멘트 맞춰서 demonstration.   </p>
+<p><img src="/static/images/IMG_2338.JPEG" alt="IMG_2338.JPEG"><br>여튼 뜨자마자 웰컴드링크. 녹차/물/감귤주스 중에 하나.   </p>
+<p><img src="/static/images/IMG_2345.JPEG" alt="IMG_2345.JPEG"><br>마시고 멍 좀 때리니 순식간에 스까국 도착. 부친 짐도 없으니 짐찾는곳 뚫고 그대로 밖으로…   </p>
+<p><img src="/static/images/IMG_2347.JPEG" alt="IMG_2347.JPEG"><br>국-바(국내선바이라는뜻ㅎ)</p>
+<center>BX 112</center>
+<center>PUS-NRT</center>
+<center>A321-200 (HL7735)</center>
+<center>29th Jul. 2019</center>
+
+<p><img src="/static/images/IMG_2346.JPEG" alt="IMG_2346.JPEG"><br>국-하(국제선하이라는뜻ㅎ)</p>
+<p><img src="/static/images/PUS_Dom_to_Int.png" alt="PUS_Dom_to_Int.png"><br>PUS의 국내선-국제선 청사간 거리는 매우 가깝다. 걸어서 딱 5분 수준.   </p>
+<p><img src="/static/images/IMG_2348.JPEG" alt="IMG_2348.JPEG"><br>5분만에 국제선 터미널 G3 도착   </p>
+<p><img src="/static/images/IMG_2349.JPEG" alt="IMG_2349.JPEG"><br>ICN과 달리 출발층은 3층이 아닌 2층. (ICN만 다닌 촌놈이라 국제선은 죄다 3층인 줄)   </p>
+<p><img src="/static/images/IMG_2350.JPEG" alt="IMG_2350.JPEG"><br>의외로? A카운터의 주인은 OZ나 KE가 아닌 BX. 그래도 꼴에 나름 PUS 허브 항공사라는건가?   </p>
+<p><img src="/static/images/IMG_2352.JPEG" alt="IMG_2352.JPEG"><br>그래도 아직까지 BX 국제선은 빳빳한 BP용지에 보딩패스를 찍어준다. </p>
+<p><img src="/static/images/IMG_2351.JPEG" alt="IMG_2351.JPEG">   </p>
+<p>휴가철이라 그런건지 평소에도 그런건지 사람은 바글바글<br><img src="/static/images/IMG_2356.JPEG" alt="IMG_2356.JPEG"><br>바글바글바글바글<br>보딩까지 남은 시간은 BX 라운지에서…   </p>
+<p><img src="/static/images/IMG_2353.PNG" alt="IMG_2353.PNG"><br>ㅡㅡ   </p>
+<p><img src="/static/images/IMG_2355.JPEG" alt="IMG_2355.JPEG"><br>ㅡㅡ;;    </p>
+<p><img src="/static/images/IMG_2357.JPEG" alt="IMG_2357.JPEG"><br>남은일 처리하면서 시간뻐기다 보니 어느새 35분 전. 호다닥 탑승구로 이동   </p>
+<p><img src="/static/images/IMG_2358.JPEG" alt="IMG_2358.JPEG"><br>3번 탑승구를 공유하던 청두행 탑승객들의 만행…  </p>
+<p><img src="/static/images/IMG_2359.JPEG" alt="IMG_2359.JPEG"><br>역시 착짱뒤짱.<br>이번 보딩은? </p>
+<p><img src="/static/images/IMG_2360.JPEG" alt="IMG_2360.JPEG"><br>응 리모트   </p>
+<p><img src="/static/images/IMG_2362.JPEG" alt="IMG_2362.JPEG"><br>거금 일만 오천 원 짜리 비상구   </p>
+<p><img src="/static/images/IMG_2364.JPEG" alt="IMG_2364.JPEG"><br>출발. BX의 국제선에서는 물 한잔조차 유료였다. 아니 그럴거면 국내선에서는 왜 주는거…?   </p>
+<p><img src="/static/images/IMG_2367.JPEG" alt="IMG_2367.JPEG"><br>근데 어짜피 두시간짜리 노선이라 티켓값만 싸면 모든게 용서됨</p>
+<p><img src="/static/images/IMG_2368.JPEG" alt="IMG_2368.JPEG"><br>본인방금 나리타땅밟는상상함ㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+<p><img src="/static/images/IMG_2371.PNG" alt="IMG_2371.PNG"><br>하지만 어림도없지ㅋㅋㅋㅋㅋ 바로 “16L” 날리고 “1터미널” ㅋㅋㅋㅋㅋㅋㅋ   </p>
+<p><img src="/static/images/IMG_2369.JPEG" alt="IMG_2369.JPEG"><br>택싱중…</p>
+<p><img src="/static/images/IMG_2373.JPEG" alt="IMG_2373.JPEG"><br>KE빠특) 아무생각없이 편명에 KE씀 </p>
+<p><img src="/static/images/IMG_2374.JPEG" alt="IMG_2374.JPEG"><br>이젠 친숙한 보딩브릿지의 SMBC 스폰서   </p>
+<p><img src="/static/images/IMG_2376.JPEG" alt="IMG_2376.JPEG"><br>웰깜투자퐁</p>
+<p><img src="/static/images/IMG_2378.JPEG" alt="IMG_2378.JPEG"><br>어서오세요우   </p>
+<p><img src="/static/images/586070408.153512.jpg" alt="586070408.153512.jpg"><br>이제 슦까이라이너 타러 ㄱㄱ</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2019/08/03/bx8803-bx112/" data-id="ck4l75qys000hdge8aqc89abv" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-galaxy-s10-change-csc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/05/galaxy-s10-change-csc/" class="article-date">
+  <time datetime="2019-07-05T08:30:00.000Z" itemprop="datePublished">2019-07-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/05/galaxy-s10-change-csc/">S10 계열 갤럭시 CSC 변경</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>S10 계열 기기가 없어서 테스트는 못해봤으나, 특정 프로그램 + UART의 조합으로 EIF Command를 입력할 수 있다는 모 카페에서의 게시글이 올라와서 해당 Method를 하나의 게시글로 정리해 보았다.</p>
+<ul>
+<li>준비물<ol>
+<li>USB Type-C UART Cable</li>
+<li><a href="https://androidfilehost.com/?fid=1322778262904004227" target="_blank" rel="noopener">SGKTEif 프로그램</a> [^1]</li>
+</ol>
+</li>
+<li>변경방법<ol>
+<li>UART 케이블과 Windows 컴퓨터를 연결</li>
+<li>SGKTEif 실행<br><img src="https://raw.githubusercontent.com/kyujin-cho/thy2134.github.io/master/static/images/CSC_1.png" alt="CSC_1.png"></li>
+<li>Port에 단말기가 올라오는지 체크 후 OPEN</li>
+<li><code>AT</code> 입력 후 SEND =&gt; Ok가 리턴되어야 함</li>
+<li><code>AT+preconfig=2,&lt;CSC&gt;</code> 입력 후 SEND =&gt; Ok가 리턴되어야 함 [^2]</li>
+<li>재부팅 </li>
+</ol>
+</li>
+</ul>
+<p>[^1]: 해당 ZIP 파일에는 암호가 걸려있다…<br>[^2]: <CSC>에는 Provider별 CSC를 입력. 한국의 경우, SKT: SKC, KT: KTC, LG U+: LUC, 자급제: KOO</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2019/07/05/galaxy-s10-change-csc/" data-id="ck4l75qyo000ddge8afwdfgvi" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-project-abandon-gh-pages" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/05/project-abandon-gh-pages/" class="article-date">
+  <time datetime="2019-07-05T08:30:00.000Z" itemprop="datePublished">2019-07-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/05/project-abandon-gh-pages/">개인 서버에 가동하는 블로그의 Github Pages 이중화 (프로젝트: 꼬와서GH-Pages에Jekyll안쓴다)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="계기"><a href="#계기" class="headerlink" title="계기"></a>계기</h2><ul>
+<li>1년만에 Pages에 올린 글(정확히는 Repo에 push한 Markdown 문서)이 아무리 시간이 지나도 웹 페이지에 뜨지 않아서 탈출을 결심<ul>
+<li>그냥 Branch를 잘못 설정해서 발생하는 문제였음</li>
+<li>사실 이거랑 관계없이 언젠가 블로그를 내 서버로 이전하려는 생각은 있었음</li>
+</ul>
+</li>
+</ul>
+<h2 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h2><ul>
+<li>Github Pages를 탈출하여 자작 서버에 블로그 열기</li>
+</ul>
+<h2 id="원리"><a href="#원리" class="headerlink" title="원리"></a>원리</h2><ul>
+<li>지금까지 글을 작성해 왔던 블로그 플랫폼은 Jekyll이라는 RoR 기반의 Static 블로그 제공 소프트웨어</li>
+<li>Markdown으로 글을 작성 후 빌드를 돌리면, 지정한 테마에 맞춰서 Production Ready의 웹 사이트를 제공해 준다</li>
+<li>Github Pages는 Jekyll을 권장하므로 여지껏 Jekyll만 써 왔음</li>
+<li>이를 그대로 클론해서 내 서버에 얹어 놓고, 글을 작성할 때 마다 수동으로 빌드하면 같은 결과를 보여줄 수 있을 것</li>
+</ul>
+<h2 id="한계"><a href="#한계" class="headerlink" title="한계"></a>한계</h2><ul>
+<li>자작 서버는 항상 켜져있지 않다!</li>
+<li>눈치채지 못한 사이 서버가 Down될 수 있음</li>
+</ul>
+<h2 id="해결법"><a href="#해결법" class="headerlink" title="해결법"></a>해결법</h2><ul>
+<li>서버의 이중화<ul>
+<li>글을 작성/수정할 때마다 Github Pages에 빌드된 블로그를 업로드</li>
+<li>자작 서버가 켜져있는 동안에는 자작 서버를 활용하기</li>
+<li>자작 서버가 꺼지면 Domain Record를 GH Pages로 변경하여 끊김없이 Serving</li>
+</ul>
+</li>
+</ul>
+<h2 id="필요한-것"><a href="#필요한-것" class="headerlink" title="필요한 것"></a>필요한 것</h2><ul>
+<li>자작 서버의 Health Check를 담당할 작은 서버</li>
+<li>Heroku Free Dyno정도면 적당할 듯</li>
+</ul>
+<h2 id="구성"><a href="#구성" class="headerlink" title="구성"></a>구성</h2><ul>
+<li><a href="https://github.com/kyujin-cho/AutomatedJekyllDeploy" target="_blank" rel="noopener">Python CLI &amp; Health Check Daemon</a><ul>
+<li>CLI (build.py)<ul>
+<li>유저가 글을 작성/수정 후에 실행해서 자동으로 빌드된 페이지를 Github에 push</li>
+<li>빌드된 페이지는 Nginx로 serve</li>
+<li><code>python build.py build &quot;&lt;Commit Message&gt;&quot;</code> 로 실행</li>
+<li>Github Pages 용으로 지정된 branch가 <code>gh-pages</code> 가 아닐 경우, <code>-b &lt;branch&gt;</code> 옵션으로 변경 가능</li>
+<li>블로그 소스 (Jekyll로 컴파일 되기 전의 MD 파일 등…) 이 저장될 Repo의 Branch 또한 <code>--backup-branch &lt;branch&gt;</code> 으로 변경 가능</li>
+</ul>
+</li>
+<li>Health Checker<ul>
+<li>Heroku에 올라가서, 10분에 한 번씩 지정한(HEALTHCHECK_URL)에 접속이 가능한 지 확인</li>
+<li>접속이 불가능하면 블로그 접속 URL(BLOG_DOMAIN)의 CNAME Record를 fallback URL(BLOG_FALLBACK_ADDR)로 변경</li>
+<li>접속이 가능해질 시 CNAME Record를 기본 URL(BLOG_SERVER_ADDR)로 변경 </li>
+<li>TG_API_KEY와 TG_USERID EnvVar가 있을 시, 서버 상태가 변경될 때 마다 TG_USERID에 알림</li>
+<li>CNAME Record를 변경하는 API는 DNS Provider 별로 다르므로, 사용하는 사람에 따라 구현 방법이 달라야 함</li>
+<li>해당 Health Checker는 Cloudflare 기준으로 작성</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="앞으로-할-것"><a href="#앞으로-할-것" class="headerlink" title="앞으로 할 것?"></a>앞으로 할 것?</h2><ul>
+<li>서버가 생겼으니, 댓글 모듈도 붙일 수 있다<ul>
+<li>근데 부 서버로 fallback 되면 댓글을 사용할 수 없으므로…</li>
+<li>댓글 서버에 연결 가능할 때에만 댓글 창이 표시되도록 해야 할 듯.</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2019/07/05/project-abandon-gh-pages/" data-id="ck4l75qyp000fdge820bn5alx" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-asus-b150-coffelake-patch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/05/asus-b150-coffelake-patch/" class="article-date">
+  <time datetime="2018-07-05T01:30:00.000Z" itemprop="datePublished">2018-07-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/05/asus-b150-coffelake-patch/">ASUS B150M-A 마더보드에 커피레이크 CPU 설치기 (진행중)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://blog.naver.com/vivamus09/221300782204" target="_blank" rel="noopener">모 네이버 블로그</a> 를 참고하여<br>진행하였다.</p>
+<ol>
+<li>준비물:</li>
+</ol>
+<ul>
+<li><p>CFL.zip:<br><a href="https://drive.google.com/file/d/16yNTMfTyBOujTuFKIQeJHQAidJ_GYnUg/edit" target="_blank" rel="noopener">https://drive.google.com/file/d/16yNTMfTyBOujTuFKIQeJHQAidJ_GYnUg/edit</a></p>
+</li>
+<li><p>Pcie-patcher: 출처의 patcher1.4.zip</p>
+</li>
+<li><p>HxD: <a href="https://mh-nexus.de/en/hxd/" target="_blank" rel="noopener">https://mh-nexus.de/en/hxd/</a></p>
+</li>
+<li><p>마더보드 BIOS ROM: v11.7.x.1xxx 이하의 ME 버전이어야 함 17’ 10월 이전<br>Release FW면 가능할듯.<br>난<br><a href="http://dlcdnet.asus.com/pub/ASUS/mb/LGA1151/B150M-A/B150M-A-ASUS-3402.zip" target="_blank" rel="noopener">v3402</a>로<br>진행.</p>
+</li>
+</ul>
+<ol>
+<li>압축 해제</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/3874fd0df88d898d1a2033d8a5ef2156.png" alt=""></p>
+<p>이중 Patcher 1.4는 PCIe Patcher, Workspace는 임의 생성한 폴더(앞으로 작업물들이<br>저장될 공간)</p>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/6709c2a6c5a255d084d779c2b38c2cf7.png" alt=""></p>
+<p>Workspace 폴더에 압축 해제한 BIOS FW 파일을 투하.</p>
+<ol>
+<li>VBIOS 업데이트</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/aad546befc07ff7a100e3324a54bc73b.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/e9111853c8737f2ca01d2f043e6dae73.png" alt=""></p>
+<ul>
+<li>UBU v1.69.11 fix 폴더에 MMTool.exe를 실행 -&gt; Load Image를 누르고, Workspace<br>폴더에서 압축 해제한 FW 파일을 선택.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/e39d97216bfec501e7bd7c3776c31f26.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/b2adcdcc4674bef08a04b4ad6d852b9b.png" alt=""></p>
+<ul>
+<li>파일 로드가 완료되면, Option ROM 탭을 선택 후 Browse를 누르고, vbios.dat 을<br>File name에 입력 후 Open</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/292facbb79b57f553a2ba4f0d04e4770.png" alt=""></p>
+<ul>
+<li>목록에서 Device ID가 406인 줄 선택, Option ROM 항목에서 Extract ~ 선택,<br>Apply 누르면 VBIOS 추출 끝.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/7868f2623bb67ed81dc00f475b921b70.png" alt=""></p>
+<ul>
+<li>MMTool 창을 그대로 유지한 채, 탐색기를 통해 Workspace 폴더로 이동하여<br>vbios.dat 파일이 생성되었음을 체크.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/349a3669e88c4eb468fca9eaa3895e42.png" alt=""></p>
+<ul>
+<li>CFL 폴더의 Intel BMP.exe를 실행. Ctrl-O를 눌러 파일 열기 창을 띄운 후,<br>Binary Data File에는 방금 추출한 vbios.dat, BMP Script File은 <code>VBIOS and
+BSF/SKLKBL/1046/skl_1046.bsf</code> 파일 선택.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/00c6f6963ebb2645d81f73fef6559c19.png" alt=""></p>
+<ul>
+<li>파일이 열리면, 상단 메뉴의 BIOS Settings-&gt; Save all…을 누르고, Workspace<br>폴더에 transfer라는 이름으로 저장.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/db0f8582585f7617e30025b2b9b77e7e.png" alt=""></p>
+<ul>
+<li>저장된 파일을 텍스트 편집기로 열고, STRING $SignOn 이라는 문구를 찾아서<br>해당 문구로 시작하는 줄을 지운 후 저장.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/9ec6a15b9e43b56e21d648330c8f89d7.png" alt=""></p>
+<ul>
+<li>BMP에서 다시 Ctrl-O로 파일 열기 창을 띄운 후, 이번에는 <code>VBIOS and
+BSF/SKLKBL/1046/skl_1046.dat</code>와 <code>VBIOS and
+BSF/SKLKBL/1046/skl_1046.bsf</code>를 선택.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/68a4ad64243e8a4c7a0767b5c44ca6f5.png" alt=""></p>
+<ul>
+<li>BIOS Settings-&gt; Apply All… 을 선택 후, 방금 수정한 transfer.ssf를 선택하여<br>패치를 진행.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/bc735d3bc8ecafd08665ddcba9d6364b.png" alt=""></p>
+<ul>
+<li>패치가 완료되면, File-&gt; Save As…를 눌러 Workspace 폴더에 new_vbios.dat 파일로<br>저장.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/1268bddf94466ae4014a0e730a574d60.png" alt=""></p>
+<ul>
+<li>BMP를 닫고, UBU v1.69.11 fix 폴더의 UEFITool.exe를 열고, File-&gt; Open으로 BIOS<br>FW 파일을 오픈.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/00e743898d8812feb2e18264d28b404a.png" alt=""></p>
+<ul>
+<li>Ctrl-F 를 눌러 Search 창을 띄우고, GUID 탭으로 이동 후, 아까 MMTool의 선택한<br>줄에 있던 Section GUID를 입력하고 검색. 앞에 두 자리까지만 입력해도 잘<br>찾아지는듯?</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/cc30f51dbc814e40f8e33e73e25351be.png" alt=""></p>
+<ul>
+<li>입력한 GUID Pattern에 매치되는 항목이 있으면 밑에 메세지가 뜬다. 이 메세지를<br>더블 클릭하여 해당 항목으로 이동.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/80c2bd6aa45d2bc6e46a576c8dad2285.png" alt=""></p>
+<ul>
+<li>해당 항목을 선택하고, Ctrl-Shift-R을 눌러 아까 저장한 new_vbios.dat을 선택.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/c4c9f8f8d556b5c2ea3ffd2fb27b7bee.png" alt=""></p>
+<ul>
+<li>이제 Ctrl-S를 눌러 after-vBIOS-patch.cap으로 저장.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/97e98f9a96f3be6ee2921e1e9c969e26.png" alt=""></p>
+<ul>
+<li>생성한 파일을 열거냐는 메세지인데, No를 누르고 UEFITool을 닫아 버리자.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/30172418f7a3832f91ea5cce0640a569.png" alt=""></p>
+<ul>
+<li>Workspace 폴더에 after-vBIOS-patch.cap 파일이 있는지 체크 후, 이 파일을 UBU<br>v1.69.11 fix 폴더로 복사.</li>
+</ul>
+<ol>
+<li>BIOS 마이크로코드 패치</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/7d8913a79c5ad551799afb30fe0db8fb.png" alt=""></p>
+<ul>
+<li>UBU 폴더의 UBU.bat 파일을 관리자 권한으로 실행하면, 똑똑하게도 폴더에 있는<br>바이오스 파일을 자동으로 찾아서 분해해 준다. 밑의 멘트가 나올때까지<br>기다리고, 모든 작업이 끝나면 아무 키나 눌러서 진행.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/0557515f8712a7a80cddb11d2168dfc8.png" alt=""></p>
+<ul>
+<li>21 테크로 EFI GOP Driver 패치.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/92912e94338fe07cf075d8258e7408ae.png" alt=""></p>
+<ul>
+<li>7을 눌러 마이크로코드 업데이트 모드로 진행.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/35814da6929629970939606051eb8426.png" alt=""></p>
+<ul>
+<li>첫째는 72</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/1e9c2b2593e08d02ba38133ae88535f5.png" alt=""></p>
+<ul>
+<li>둘째는 BE</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/7c011e51fa53495243f93b0a5a780cd0.png" alt=""></p>
+<ul>
+<li>패치중…</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/fecc3fc969fd94710e848116921e1bc7.png" alt=""></p>
+<ul>
+<li>패치끝.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/9c81ded24436a347720456c6a3f2f2b2.png" alt=""></p>
+<ul>
+<li>01 테크로 파일 저장. 이후 엔터키 누르면 종료.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/8726182075982e5dcf81a9499592b511.png" alt=""></p>
+<ul>
+<li>전에 없던 B15A4.cap이 생긴 걸 볼 수 있다. Workspace 폴더로 옮겨 주자.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/b5d7a8c770b84413c4656699a680d055.png" alt=""></p>
+<ul>
+<li>Patcher 1.4 폴더를 Powershell에서 열어주자(Shift-RClick 후 Open PS window<br>here)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/d30dfea3b9c0295d2babd39eeb186bcb.png" alt=""></p>
+<ul>
+<li><code>./pcie_patcher.cmd ../Workspace/B15A4.CAP</code> 명령으로 패치.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/9c49863adca3628bd6ecf31811127c01.png" alt=""></p>
+<ul>
+<li>패치끝. 밑의 오류는 신경 쓸 필요 없다.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thy2134/thy2134.github.io/master/static/images/46ec8ac62701aac69b985f07425e2660.png" alt=""></p>
+<ul>
+<li>Workspace 폴더에 B15A4.CAP.patched 파일이 생성됐음을 볼 수 있다. 이것이<br>완성본.</li>
+</ul>
+<ol>
+<li>기타</li>
+</ol>
+<ul>
+<li><p>i5 이상의 CPU일 경우,<br><a href="http://www.hwbattle.com/bbs/board.php?bo_table=cpumbram&amp;wr_id=112671" target="_blank" rel="noopener">http://www.hwbattle.com/bbs/board.php?bo_table=cpumbram&amp;wr_id=112671</a> 를<br>참고해서 CPU 접점에 절연 및 은박신공을 해야 한다.</p>
+</li>
+<li><p>Non-K CPU만 박아야 한다. 안그러면 CPU 수명이 단축될 수 있다고.</p>
+</li>
+<li><p>B/H 칩셋에서는 i7의 Turbo Boost가 제대로 지원되지 않는다고 한다.</p>
+</li>
+<li><p>ASUS 및 일부 애자락 보드의 경우 Windows에서 돌아가는 FW Update Tool이 아니라<br>CH341A ROM Writer를 이용해서 수동으로 ROM을 올려야 한다. ROM Writer의<br>사용법은<br><a href="http://gall.dcinside.com/board/view/?id=pridepc_new3&no=7795125" target="_blank" rel="noopener">컴갤</a>에<br><a href="http://gall.dcinside.com/board/view/?id=pridepc_new3&no=7795139" target="_blank" rel="noopener">자세히</a><br>정리되어 있다.</p>
+<ul>
+<li>만약 당신의 보드에 BIOS Chip이 납땜되어 있다면, SOP8 Clip과 점퍼 F-F<br>케이블을 이용하여 ROM Writer에 연결해야 한다.</li>
+</ul>
+</li>
+<li><p>1에서 언급한 1046이라는 숫자는 보드 SKL에 따라 다를 수 있다. 내 보드가<br>B150M-A가 아닐 경우에는 맨 위 출처를 참고하여 숫자를 알아내자.</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2018/07/05/asus-b150-coffelake-patch/" data-id="ck4l75qym000bdge8576q2qas" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-diy-doh-server" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/10/diy-doh-server/" class="article-date">
+  <time datetime="2018-05-10T03:00:00.000Z" itemprop="datePublished">2018-05-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/10/diy-doh-server/">DNS over HTTPS 서버를 직접 만들어 보자</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol start="0">
+<li>호옥시나, 그럴일은 없겠지만, 정부가 무식하게 DoH 지원하는 Resolver들을 막아버리면(…) 어쩔까 하는 생각에 작성하는 글이다.    </li>
+<li>준비물: <ul>
+<li>DNS 검열을 받지 않는 지역(일본이던, 미국이던, …)에 존재하는 Linux 서버. 꼭 리눅스가 아니어도 되지만, 내가 설명하기 편하니까…</li>
+<li>이러한 지식에 대한 기초적인 이해 </li>
+</ul>
+</li>
+<li>먼저, DoH 서버를 올릴 컴퓨터로 접속해서 <code>https://github.com/hardillb/dns-over-https</code> 를 클론 한다.</li>
+<li><code>cd dns-over-https</code> 후, <code>./mkCert.sh $(curl ipconfig.io)</code> 를 이용해 Self-Signed Certificate를 만든다. </li>
+<li><code>npm install</code> 하던, <code>yarn install</code> 하던… 취향에 맞는 Package Manager로 Dependency들을 설치한다.</li>
+<li><code>npm start</code>, <code>yarn start</code> 등으로 서버를 실행하면 된다. DoH는 443을 이용해 통신하므로, 방화벽에서 443 포트를 당연히 열어줘야지.</li>
+<li>근데 이렇게만 만들어 놓으면 터미널 세션을 나가버리면 서버가 꺼지니까, systemd를 이용해 데몬화 시켜주자.<ol>
+<li><a href="/static/doh-server.service">Systemd Script</a>를 다운받아서 <code>/lib/systemd/system</code> 에 저장한다. 귀찮으면 걍 <code>cd /lib/systemd/system; sudo wget https://blog.r3mark.xyz/static/doh-server.service</code> 로 해결.</li>
+<li><code>sudo vi /lib/systemd/system/doh-server.service</code> 로 열어서, <code>WorkingDirectory=</code> 뒤의 경로를 Git Repo가 저장된 경로로 바꿔주고 <code>:wq</code>로 저장한다.</li>
+<li><code>sudo systemctl daemon-reload</code> 후, <code>sudo service doh-server start</code> 하면 서비스가 실행된다. </li>
+</ol>
+</li>
+<li>서버 설정은 다 끝났으나, 아직 할 일이 남았다. 우리가 만든 TLS용 Cert는 Self-Signed이기 때문에, Client에서 바로 접속하려 하면 Cert가 올바르게 Sign되지 않았다고 에러를 뱉으므로… Cert를 미리 컴퓨터에 설치해야 한다. <ul>
+<li>먼저, 터미널에서 Repo 폴더에 저장된 <code>server.crt</code> 파일을 찾아 컴퓨터에 미리 저장해 두어야 한다.</li>
+<li>Windows에서는<ol>
+<li>Win+R키로 실행 창을 띄우고, mmc.exe를 입력 후 엔터를 친다.</li>
+<li>Ctrl+M을 누르고, 왼쪽의 Available Snap-ins에서 <code>Certificates (Local Computer)</code>를 찾아서 클릭 후 <code>Add &gt;</code> 를 누른다.</li>
+<li>OK를 눌러 창을 닫는다.</li>
+<li>이제 <code>Console Root</code> 밑에 <code>Certificates (Local Computer)</code> 가 추가되었다. 더블 클릭 후, <code>Trusted People &gt; Certificates</code> 순으로 접근한다. </li>
+<li>우측의 빈 공간을 우클릭 후 <code>All Tasks &gt; Import</code> 를 눌러 인증서를 추가한다.</li>
+<li>Next 후, <code>File to Import</code> 창이 나오면 다운받아 두었던 <code>server.crt</code> 를 선택하고, Next를 누른다.</li>
+<li>다시 Next를 누르면 인증서가 불러와 져 있다.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>이제, 이전 게시글(<a href="/it/2018/05/04/install-cloudflare-doh-on-windows.html">Windows</a>, <a href="/it/2018/05/04/install-cloudflare-doh-on-macos.html">macOS</a>)을 참조하여 DoH Client를 설정한다. 이때, Config.yml을 작성하는 부분에서 <code>https://1.1.1.1/dns-query</code> 대신 <code>https://(서버 IP)/query</code> 를 적어 준다.</li>
+<li>끝! </li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2018/05/10/diy-doh-server/" data-id="ck4l75qyk0008dge8gds4go1x" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-install-cloudflare-doh-on-macos" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/05/install-cloudflare-doh-on-macos/" class="article-date">
+  <time datetime="2018-05-04T16:00:00.000Z" itemprop="datePublished">2018-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/05/install-cloudflare-doh-on-macos/">macOS에 Cloudflare DNS와 DNS on HTTPS 연결을 해주는 Authoritative Name Server 설치하기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2018년 5월 4일부로, 문화체육관광부가 DNS 쿼리 오염을 통한 불법 사이트 차단을 시작했다.   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ nslookup bamtoki.com    </span><br><span class="line">Server:  1dot1dot1dot1.cloudflare-dns.com    </span><br><span class="line">Address:  1.1.1.1    </span><br><span class="line">Name:    bamtoki.com    </span><br><span class="line">Address:  121.189.57.82</span><br><span class="line">&#96;&#96;&#96;    </span><br><span class="line"></span><br><span class="line">다음은 DNS 오염을 이용한 서버 차단의 예시이다. &#96;nslookup&#96; 명령어를 통해 대표적인 불법 웹툰 사이트인 &#96;bamtoki.com&#96;의 IP를 질의했더니, 원래 IP가 아닌 이상한 IP가 튀어나온다.   </span><br><span class="line">그리고 해당 IP는,</span><br></pre></td></tr></table></figure>
+<p>$ nslookup <a href="http://www.warning.or.kr" target="_blank" rel="noopener">www.warning.or.kr</a><br>Server:  localhost<br>Address:  127.0.0.1<br>Non-authoritative answer:<br>Name:    <a href="http://www.warning.or.kr" target="_blank" rel="noopener">www.warning.or.kr</a><br>Address:  121.189.57.82</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">짜잔. 무려 &#96;warning.or.kr&#96;에 엮인 IP다.    </span><br><span class="line">정부가 특정 사이트에 대한 DNS 질의를 무단으로 가로채서 변조 후 전송한다는 뜻이다.   </span><br><span class="line">하지만 방패가 있으면 창이 있으니, 얼마 전에 발표한 Cloudflare의 DNS와 함께 발표된 Argo Tunnel을 이용해 쉽게 DNS 연결을 암호화 할 수 있다.   </span><br><span class="line"></span><br><span class="line">0. &#96;brew install cloudflare&#x2F;cloudflare&#x2F;cloudflared&#96; 로 cloudflared를 설치한다.</span><br><span class="line">1. &#96;cd ~&#x2F;&#96;로 유저 폴더로 이동한다.</span><br><span class="line">2. &#96;mkdir .cloudflared&#96; 로 cloudflared 설정 파일이 들어갈 폴더를 생성한다.</span><br><span class="line">3. &#96;cd .cloudflared&#96; 한 후, vi 등으로 &#96;config.yml&#96; 파일을 만든다. 내용은 [Windows 버전](&#x2F;it&#x2F;2018&#x2F;05&#x2F;04&#x2F;install-cloudflare-doh-on-windows.html)을 참조한다.</span><br><span class="line">4. &#96;sudo cloudflared service install&#96; 로 cloudflared 서비스를 설치한다.</span><br><span class="line">5. &#96;sudo launchctl start com.cloudflare.cloudflared&#96; 로 cloudflared 데몬을 실행한다.</span><br><span class="line">6. &#96;sudo lsof -i UDP:53&#96; 명령어로 cloudflared 데몬이 제대로 돌아가고 있는지 확인한다.</span><br></pre></td></tr></table></figure>
+<p>COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME<br>cloudflar 96272 root    3u  IPv4 0xb8aaa9d10728bd67      0t0  UDP *:domain</p>
+<pre><code>7. 이런 식으로 나오면 성공.
+8. `dig +short @127.0.0.1 bamtoki.com AAA` 명령어로 Query가 제대로 이루어지는지 체크한다.
+9. macOS의 DNS를 127.0.0.1로 변경한다.</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2018/05/05/install-cloudflare-doh-on-macos/" data-id="ck4l75qyg0005dge8b3jm86cz" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-install-cloudflare-doh-on-windows" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/05/install-cloudflare-doh-on-windows/" class="article-date">
+  <time datetime="2018-05-04T16:00:00.000Z" itemprop="datePublished">2018-05-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/05/install-cloudflare-doh-on-windows/">Windows에 Cloudflare DNS와 DNS on HTTPS 연결을 해주는 Authoritative Name Server 설치하기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2018년 5월 4일부로, 문화체육관광부가 DNS 쿼리 오염을 통한 불법 사이트 차단을 시작했다.   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ nslookup bamtoki.com    </span><br><span class="line">Server:  1dot1dot1dot1.cloudflare-dns.com    </span><br><span class="line">Address:  1.1.1.1    </span><br><span class="line">Name:    bamtoki.com    </span><br><span class="line">Address:  121.189.57.82</span><br><span class="line">&#96;&#96;&#96;    </span><br><span class="line"></span><br><span class="line">다음은 DNS 오염을 이용한 서버 차단의 예시이다. &#96;nslookup&#96; 명령어를 통해 대표적인 불법 웹툰 사이트인 &#96;bamtoki.com&#96;의 IP를 질의했더니, 원래 IP가 아닌 이상한 IP가 튀어나온다.   </span><br><span class="line">그리고 해당 IP는,</span><br></pre></td></tr></table></figure>
+<p>$ nslookup <a href="http://www.warning.or.kr" target="_blank" rel="noopener">www.warning.or.kr</a><br>Server:  localhost<br>Address:  127.0.0.1<br>Non-authoritative answer:<br>Name:    <a href="http://www.warning.or.kr" target="_blank" rel="noopener">www.warning.or.kr</a><br>Address:  121.189.57.82</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">짜잔. 무려 &#96;warning.or.kr&#96;에 엮인 IP다.    </span><br><span class="line">정부가 특정 사이트에 대한 DNS 질의를 무단으로 가로채서 변조 후 전송한다는 뜻이다.   </span><br><span class="line">하지만 방패가 있으면 창이 있으니, 얼마 전에 발표한 Cloudflare의 DNS와 함께 발표된 Argo Tunnel을 이용해 쉽게 DNS 연결을 암호화 할 수 있다.   </span><br><span class="line"></span><br><span class="line">0. 32-bit 컴퓨터는 [이곳](https:&#x2F;&#x2F;bin.equinox.io&#x2F;c&#x2F;VdrWdbjqyF&#x2F;cloudflared-stable-windows-386.zip), 64-bit 컴퓨터는 [이곳](https:&#x2F;&#x2F;bin.equinox.io&#x2F;c&#x2F;VdrWdbjqyF&#x2F;cloudflared-stable-windows-amd64.zip) 에서 cloudflared 실행 파일이 담긴 zip 파일을 다운로드 받는다. </span><br><span class="line">1. 다운로드 받은 cloudflared.exe를 적당한 곳에 압축 풀어준다. 이 예시에서는 C:\Cloudflared\cloudflared.exe로 하겠다.</span><br><span class="line">2. CMD를 &quot;관리자 권한&quot;으로 열어준다.</span><br><span class="line">3. CMD에서 파일이 저장된 폴더(여기서는 C:\Cloudflared) 로 이동한다.</span><br><span class="line">4. &#96;cloudflared service install&#96; 을 실행한다. 정상적으로 서비스가 설치되었으면 &#96;INFO[0000] Installing Argo Tunnel Windows service&#96; 라는 메세지가 나온다.</span><br><span class="line">5. 이제 탐색기를 열고, &#96;C:\Windows\System32\config\systemprofile&#96; 폴더로 이동한다.</span><br><span class="line">6. &#96;.cloudflared&#96; 폴더를 생성한다.</span><br><span class="line">7. 메모장을 열고, 다음 내용을 붙여넣는다.</span><br></pre></td></tr></table></figure>
+<pre><code>proxy-dns: true    
+proxy-dns-upstream:     
+    - https://1.1.1.1/dns-query    
+    - https://1.0.0.1/dns-query
+```    </code></pre><ol start="8">
+<li>파일을 <code>config.yml</code> 이라는 이름으로 바탕 화면에 저장한다.</li>
+<li>저장한 파일을 방금 생성한 <code>.cloudflared</code> 폴더 안에 집어넣는다.</li>
+<li>시작+R 을 누르고 services.msc를 입력 후 엔터.</li>
+<li><code>Argo tunnel agent</code> 서비스를 찾아서 시작한다.</li>
+<li>컴퓨터의 DNS를 127.0.0.1로 변경한다.</li>
+<li>CMD에서 <code>nslookup bamtoki.com</code> 을 입력해, 위의 결과가 아닌 다른 결과가 나오면 성공.<br><img src="/static/images/Argo_1.png" alt="1">  </li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2018/05/05/install-cloudflare-doh-on-windows/" data-id="ck4l75qyi0007dge8fufh06mi" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-set-up-my-own-smart-dns-service" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/20/set-up-my-own-smart-dns-service/" class="article-date">
+  <time datetime="2017-11-20T09:00:00.000Z" itemprop="datePublished">2017-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/20/set-up-my-own-smart-dns-service/">Smart DNS 서버 구축하기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>이 글은 <a href="https://github.com/jamiees2/dnsproxy" target="_blank" rel="noopener">해당 Github Repo</a> 를 거의 대부분 참고하여 작성</p>
+<p>미국 Amazon Prime Video 서비스에는 지역락이 걸려있어서, 미국을 제외한 지역에서는 시청할 수 없다. Netflix, Hulu, 기타 등등 수많은 VOD/Live TV 서비스들 역시 비슷한 방식의 지역락을 걸고 있다.<br>보통 지역락을 걸기 위해서는, 유저가 서비스에 접속할 때 서버에 특정 요청을 보내 유저의 IP가 재생 가능 지역에 속해 있는지 아닌지를 서버가 판단하는 방식을 취한다.<br><img src="https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_3.png?raw=true" alt="Image">    </p>
+<p>Amazon Prime Video의 예시. Amazon Prime Video는 <code>https://atv-ps.amazon.com/cdp/catalog/GetPlaybackResources</code> 에 POST 요청을 보내서, 영상의 정보와 지역락 여부를 가져온다.<br>이러한 요청을 보내는 과정은 대략 네임서버(혹은 캐시)에서 IP를 땡겨옴-&gt;IP에 요청을 보냄-&gt;전달받음 인데, Smart DNS 서비스는 이 과정을 파고드는 서비스이다.<br>자체 네임서버를 한 대 두고, 여러 스트리밍 서비스들의 인증 도메인에 연결된 원래 IP를 미국 내의 프록시 서버로 바꿔치기 하는 것이다.<br>이렇게 되면, 브라우저는 원래 도메인 대신 프록시 서버에 동일한 요청을 보내고, 미국 내의 프록시 서버가 원래 인증 서버에 요청을 보내 그 결과를 사용자의 컴퓨터에 돌려주게 된다.<br>이 과정에서, 인증 서버는 사용자의 컴퓨터가 한국에 있는 것이 아니라 미국에 있는 것으로 인식하여, 인증을 우회할 수 있는 것이다.<br>요약하자면   </p>
+<ol>
+<li><p>한국에서 일반 네임서버로 도메인의 IP를 질의 =&gt; 인증서버의 IP를 돌려줌    </p>
+</li>
+<li><p>돌려준 인증 서버에 요청을 보냄 =&gt; 인증 서버에서는 요청이 미국 바깥에서 온 것으로 판단, 블락<br>이었던 것이    </p>
+</li>
+<li><p>한국에서 특수 네임서버로 도메인의 IP를 질의 =&gt; 인증서버가 아닌 프록시 서버의 IP를 돌려줌    </p>
+</li>
+<li><p>프록시 서버에 요청을 보냄 =&gt; 요청을 받은 미국의 프록시 서버가 미국의 인증 서버에 요청을 보냄    </p>
+</li>
+<li><p>미국의 프록시 서버에서는 요청이 미국 내 서버에서 온 것으로 판단, 허용 및 정보 리턴    </p>
+</li>
+<li><p>리턴받은 정보를 프록시 서버가 다시 한국의 컴퓨터에게 돌려줌    </p>
+</li>
+</ol>
+<p>이렇게 되는 것.    </p>
+<p>인증 구간 하나만 캡쳐해서 프록시 서버로 던져버리는거라 VPN에 비해 속도 문제가 거의 없기 때문에, 미국 VOD 서비스를 보기 위해 많이들 쓰는 방식이다.<br>단점은… 비싸다는거 -_-<br>대강 한달에 10불 정도 한다.<br>프라임 끊느라 1년에 50불을 내는데 영상 보려고 10불을 또 낼수는 없으니, 남는 VPS에 실제로 구축해보기로 했다.       </p>
+<ul>
+<li>준비물    </li>
+</ul>
+<ol>
+<li><p>프록시 서버 역할을 할, Ubuntu가 설치된 미국 내에 위치한 VPS. 사양은 512MB 램이면 충분하다.</p>
+</li>
+<li><p>Python2가 설치된 네임서버 역할을 할 컴퓨터. 라즈베리 파이 정도면 충분하다. DD-WRT가 설치된 공유기도 된다. 영상을 컴퓨터에서 보려면 굳이 없어도 된다. </p>
+</li>
+<li><p>기초적인 Linux / 네트워크 지식 </p>
+</li>
+<li><p>작업을 할 컴퓨터에서 <code>https://github.com/jamiees2/dnsproxy</code> 레포지토리를 clone 한다.</p>
+</li>
+<li><p>proxies/proxies-us.json을 열어 해당 도메인이 포함된 Dictionary를 지운다. 응답하지 않는 도메인이므로, 그냥 놔두면 에러를 일으킨다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">token.dramafever.com</span><br><span class="line">htmltvui-api.netflix.com</span><br><span class="line">mvid.yql.yahoo.com</span><br><span class="line">videoplayer.vevo.com</span><br></pre></td></tr></table></figure>
+<p>이후에, 레포의 config-sample.json을 config.json으로 변경 후 public_ip 항목을 VPS의 IP로 변경한다. </p>
+</li>
+<li><p>레포지토리로 이동 후, <code>python dnsproxy.py -o haproxy</code> 를 실행하여 설정 파일을 생성한다. 생성한 설정 파일은 output/ 폴더에 위치해 있다. </p>
+</li>
+<li><p>프록시 서버에 SSH로 연결한다.</p>
+</li>
+<li><p>다음 명령을 실행하여 HAProxy를 설치한다.    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update -qq &amp;&amp; apt-get install -y software-properties-common</span><br><span class="line">add-apt-repository -y ppa:vbernat&#x2F;haproxy-1.5</span><br><span class="line">apt-get update -qq &amp;&amp; apt-get install -y haproxy</span><br></pre></td></tr></table></figure></li>
+<li><p>/etc/haproxy/haproxy.cfg를 haproxy.cfg.old로 이름을 바꾼다.</p>
+</li>
+<li><p>dnsproxy 폴더 안의 output/haproxy.conf를 /etc/haproxy/haproxy.conf 에 저장한다. </p>
+</li>
+<li><p><code>service haproxy restart</code> 로 HAProxy를 재시작한다. </p>
+</li>
+<li><p>이제 프록시 서버 설정은 끝났다. 다시 작업 컴퓨터로 돌아오자.</p>
+</li>
+<li><p>작업 컴퓨터에 DNSMasq를 설치한다. 맥은 <a href="https://gist.github.com/ogrrd/5831371" target="_blank" rel="noopener">링크</a>를 참고하여, Ubuntu는 <code>sudo apt install dnsmasq</code>를 입력하여 설치한다.</p>
+</li>
+<li><p>맥은 <code>/usr/local/etc/dnsmasq.conf</code>, Ubuntu는 <code>/etc/dnsmasq.conf</code> 를 열어 안의 내용물을 dnsproxy 레포 내의 dnsmasq-haproxy.conf의 내용물로 교체한다.</p>
+</li>
+<li><p>DNSMasq를 재시작한다. </p>
+</li>
+<li><p>영상을 시청할 컴퓨터의 인터넷이 들어오는 NIC의 DNS를 방금 DNSMasq를 설치한 컴퓨터의 IP로 바꿔준다. 로컬에 설치했을 경우에는 127.0.0.1, 아니면 알아서 입력한다. 보조 DNS는 ISP의 DNS를 넣어준다. 넣어주지 않으면 인터넷이 안된다.</p>
+</li>
+<li><p>DNS Cache를 Flush 후 <code>nslookup atv-ps.amazon.com</code> 명령어를 실행하여 Address 부분이 Proxy Server의 IP Addr로 적용되었는지 체크한다.</p>
+</li>
+</ol>
+<p><img src="https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_1.png?raw=true" alt="Image"><br>적용 전<br><img src="https://github.com/thy2134/thy2134.github.io/blob/master/static/images/DNS_2.png?raw=true" alt="Image"><br>적용 후    </p>
+<p>영상이 재생된다. 만세!     </p>
+<p>PS) 이걸 해보자고 결심한게 VPN을 통해 Youtube TV로 NCAA Football PO를 보고 나서인데, 정작 이걸 써도 Youtube TV는 작동하지 않는다. ㅡㅡ<br>다른 방법 연구가 필요할 듯.<br>PS2) XBox 360 / PS3 / Bravia TV및 BDP / 옛 삼성 TV의 경우에는 이 방식을 지원하지 않아, DNAT 방식으로 설정해야 한다고 한다. 설정방법은 해당 레포 Wiki에 있으니 알아서 잘…</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2017/11/20/set-up-my-own-smart-dns-service/" data-id="ck4l75qyf0004dge8bddg97l6" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">다음 &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Flight/">Flight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">7월 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">5월 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">11월 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">10월 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">8월 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/04/strandhogg-example/">Android Strandhogg 취약점 구동 예시</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/20/s10-or-newer-csc-change/">S10, 그 이상 기기들의 CSC 변경법 (작동 확인)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/03/bx8803-bx112/">BX8803/BX112 탑승기</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/05/galaxy-s10-change-csc/">S10 계열 갤럭시 CSC 변경</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/05/project-abandon-gh-pages/">개인 서버에 가동하는 블로그의 Github Pages 이중화 (프로젝트: 꼬와서GH-Pages에Jekyll안쓴다)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Kyujin Cho<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

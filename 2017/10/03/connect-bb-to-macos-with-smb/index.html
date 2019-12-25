@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>macOS에서 BlackBerry Link 없이 BB와 연결하기 | My blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="macOS High Sierra 업뎃 이후로 BB Blend&#x2F;Link가 작동하지 않아 찾은 대체 방식이다. BB와 컴퓨터를 SMB로 연결하여 파일을 전송 가능하게 해준다.다만 SMB 연결이라 속도가 상당히 느리다.  macOS의 System Pref. -&gt; Network에서 BlackBerry가 연결되는지 확인한다(노란불 들어오면 OK).     BB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macOS에서 BlackBerry Link 없이 BB와 연결하기">
+<meta property="og:url" content="https://blog.r3mark.xyz/2017/10/03/connect-bb-to-macos-with-smb/index.html">
+<meta property="og:site_name" content="My blog">
+<meta property="og:description" content="macOS High Sierra 업뎃 이후로 BB Blend&#x2F;Link가 작동하지 않아 찾은 대체 방식이다. BB와 컴퓨터를 SMB로 연결하여 파일을 전송 가능하게 해준다.다만 SMB 연결이라 속도가 상당히 느리다.  macOS의 System Pref. -&gt; Network에서 BlackBerry가 연결되는지 확인한다(노란불 들어오면 OK).     BB">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2017-10-03T07:00:00.000Z">
+<meta property="article:modified_time" content="2019-12-25T10:52:33.276Z">
+<meta property="article:author" content="Kyujin Cho">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="My blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.r3mark.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-connect-bb-to-macos-with-smb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/03/connect-bb-to-macos-with-smb/" class="article-date">
+  <time datetime="2017-10-03T07:00:00.000Z" itemprop="datePublished">2017-10-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      macOS에서 BlackBerry Link 없이 BB와 연결하기
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>macOS High Sierra 업뎃 이후로 BB Blend/Link가 작동하지 않아 찾은 대체 방식이다. BB와 컴퓨터를 SMB로 연결하여 파일을 전송 가능하게 해준다.<br>다만 SMB 연결이라 속도가 상당히 느리다.</p>
+<ol>
+<li><p>macOS의 System Pref. -&gt; Network에서 BlackBerry가 연결되는지 확인한다(노란불 들어오면 OK).   </p>
+</li>
+<li><p>BB의 Settings -&gt; Storage and Access로 접근하여 Access using Wi-Fi 옵션을 활성화해준다.   </p>
+</li>
+<li><p>적절한 Password를 설정한다.</p>
+</li>
+<li><p>Password 설정 후, Identification on Network로 접근하여 본인의 BB의 이름과 Username을 확인한다.</p>
+</li>
+<li><p>macOS Finder에서 Cmd + K를 눌러 서버 접속 다이얼로그를 연 후, 주소창에 smb://&lt;BB 이름&gt;을 넣고 연결을 누른다.</p>
+</li>
+<li><p>4에서 확인한 Username과 3에서 설정한 Password를 입력하고 연결을 누른다.</p>
+</li>
+<li><p>마운트할 볼륨을 선택한다. media가 내부 저장소, removable_sdcard가 외부 저장소이다.</p>
+</li>
+<li><p>파일을 확인할 수 있다.</p>
+</li>
+</ol>
+<ul>
+<li>Troubleshooting</li>
+</ul>
+<ol>
+<li>Network 패널에서 BB가 잡히지 않을 경우<br><a href="https://github.com/thy2134/thy2134.github.io/blob/files/Drivers.zip?raw=true" target="_blank" rel="noopener">드라이버</a> 를 설치 후, 재시작해본다.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2017/10/03/connect-bb-to-macos-with-smb/" data-id="ck4l75qy80001dge8ea7h9y6i" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/20/set-up-my-own-smart-dns-service/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">최신</strong>
+      <div class="article-nav-title">
+        
+          Smart DNS 서버 구축하기
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/28/disable-namuwiki-svg/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">나무위키의 SVG 이미지를 원래 이미지로 바꿔서 다운로드 받아 보자</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Flight/">Flight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">7월 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">5월 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">11월 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">10월 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">8월 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/04/strandhogg-example/">Android Strandhogg 취약점 구동 예시</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/20/s10-or-newer-csc-change/">S10, 그 이상 기기들의 CSC 변경법 (작동 확인)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/03/bx8803-bx112/">BX8803/BX112 탑승기</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/05/galaxy-s10-change-csc/">S10 계열 갤럭시 CSC 변경</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/05/project-abandon-gh-pages/">개인 서버에 가동하는 블로그의 Github Pages 이중화 (프로젝트: 꼬와서GH-Pages에Jekyll안쓴다)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Kyujin Cho<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

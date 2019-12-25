@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>개인 서버에 가동하는 블로그의 Github Pages 이중화 (프로젝트: 꼬와서GH-Pages에Jekyll안쓴다) | My blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="계기 1년만에 Pages에 올린 글(정확히는 Repo에 push한 Markdown 문서)이 아무리 시간이 지나도 웹 페이지에 뜨지 않아서 탈출을 결심 그냥 Branch를 잘못 설정해서 발생하는 문제였음 사실 이거랑 관계없이 언젠가 블로그를 내 서버로 이전하려는 생각은 있었음    목표 Github Pages를 탈출하여 자작 서버에 블로그 열기  원리 지금까">
+<meta property="og:type" content="article">
+<meta property="og:title" content="개인 서버에 가동하는 블로그의 Github Pages 이중화 (프로젝트: 꼬와서GH-Pages에Jekyll안쓴다)">
+<meta property="og:url" content="https://blog.r3mark.xyz/2019/07/05/project-abandon-gh-pages/index.html">
+<meta property="og:site_name" content="My blog">
+<meta property="og:description" content="계기 1년만에 Pages에 올린 글(정확히는 Repo에 push한 Markdown 문서)이 아무리 시간이 지나도 웹 페이지에 뜨지 않아서 탈출을 결심 그냥 Branch를 잘못 설정해서 발생하는 문제였음 사실 이거랑 관계없이 언젠가 블로그를 내 서버로 이전하려는 생각은 있었음    목표 Github Pages를 탈출하여 자작 서버에 블로그 열기  원리 지금까">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2019-07-05T08:30:00.000Z">
+<meta property="article:modified_time" content="2019-12-25T10:52:33.280Z">
+<meta property="article:author" content="Kyujin Cho">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="My blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="검색"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.r3mark.xyz"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-project-abandon-gh-pages" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/05/project-abandon-gh-pages/" class="article-date">
+  <time datetime="2019-07-05T08:30:00.000Z" itemprop="datePublished">2019-07-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      개인 서버에 가동하는 블로그의 Github Pages 이중화 (프로젝트: 꼬와서GH-Pages에Jekyll안쓴다)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="계기"><a href="#계기" class="headerlink" title="계기"></a>계기</h2><ul>
+<li>1년만에 Pages에 올린 글(정확히는 Repo에 push한 Markdown 문서)이 아무리 시간이 지나도 웹 페이지에 뜨지 않아서 탈출을 결심<ul>
+<li>그냥 Branch를 잘못 설정해서 발생하는 문제였음</li>
+<li>사실 이거랑 관계없이 언젠가 블로그를 내 서버로 이전하려는 생각은 있었음</li>
+</ul>
+</li>
+</ul>
+<h2 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h2><ul>
+<li>Github Pages를 탈출하여 자작 서버에 블로그 열기</li>
+</ul>
+<h2 id="원리"><a href="#원리" class="headerlink" title="원리"></a>원리</h2><ul>
+<li>지금까지 글을 작성해 왔던 블로그 플랫폼은 Jekyll이라는 RoR 기반의 Static 블로그 제공 소프트웨어</li>
+<li>Markdown으로 글을 작성 후 빌드를 돌리면, 지정한 테마에 맞춰서 Production Ready의 웹 사이트를 제공해 준다</li>
+<li>Github Pages는 Jekyll을 권장하므로 여지껏 Jekyll만 써 왔음</li>
+<li>이를 그대로 클론해서 내 서버에 얹어 놓고, 글을 작성할 때 마다 수동으로 빌드하면 같은 결과를 보여줄 수 있을 것</li>
+</ul>
+<h2 id="한계"><a href="#한계" class="headerlink" title="한계"></a>한계</h2><ul>
+<li>자작 서버는 항상 켜져있지 않다!</li>
+<li>눈치채지 못한 사이 서버가 Down될 수 있음</li>
+</ul>
+<h2 id="해결법"><a href="#해결법" class="headerlink" title="해결법"></a>해결법</h2><ul>
+<li>서버의 이중화<ul>
+<li>글을 작성/수정할 때마다 Github Pages에 빌드된 블로그를 업로드</li>
+<li>자작 서버가 켜져있는 동안에는 자작 서버를 활용하기</li>
+<li>자작 서버가 꺼지면 Domain Record를 GH Pages로 변경하여 끊김없이 Serving</li>
+</ul>
+</li>
+</ul>
+<h2 id="필요한-것"><a href="#필요한-것" class="headerlink" title="필요한 것"></a>필요한 것</h2><ul>
+<li>자작 서버의 Health Check를 담당할 작은 서버</li>
+<li>Heroku Free Dyno정도면 적당할 듯</li>
+</ul>
+<h2 id="구성"><a href="#구성" class="headerlink" title="구성"></a>구성</h2><ul>
+<li><a href="https://github.com/kyujin-cho/AutomatedJekyllDeploy" target="_blank" rel="noopener">Python CLI &amp; Health Check Daemon</a><ul>
+<li>CLI (build.py)<ul>
+<li>유저가 글을 작성/수정 후에 실행해서 자동으로 빌드된 페이지를 Github에 push</li>
+<li>빌드된 페이지는 Nginx로 serve</li>
+<li><code>python build.py build &quot;&lt;Commit Message&gt;&quot;</code> 로 실행</li>
+<li>Github Pages 용으로 지정된 branch가 <code>gh-pages</code> 가 아닐 경우, <code>-b &lt;branch&gt;</code> 옵션으로 변경 가능</li>
+<li>블로그 소스 (Jekyll로 컴파일 되기 전의 MD 파일 등…) 이 저장될 Repo의 Branch 또한 <code>--backup-branch &lt;branch&gt;</code> 으로 변경 가능</li>
+</ul>
+</li>
+<li>Health Checker<ul>
+<li>Heroku에 올라가서, 10분에 한 번씩 지정한(HEALTHCHECK_URL)에 접속이 가능한 지 확인</li>
+<li>접속이 불가능하면 블로그 접속 URL(BLOG_DOMAIN)의 CNAME Record를 fallback URL(BLOG_FALLBACK_ADDR)로 변경</li>
+<li>접속이 가능해질 시 CNAME Record를 기본 URL(BLOG_SERVER_ADDR)로 변경 </li>
+<li>TG_API_KEY와 TG_USERID EnvVar가 있을 시, 서버 상태가 변경될 때 마다 TG_USERID에 알림</li>
+<li>CNAME Record를 변경하는 API는 DNS Provider 별로 다르므로, 사용하는 사람에 따라 구현 방법이 달라야 함</li>
+<li>해당 Health Checker는 Cloudflare 기준으로 작성</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="앞으로-할-것"><a href="#앞으로-할-것" class="headerlink" title="앞으로 할 것?"></a>앞으로 할 것?</h2><ul>
+<li>서버가 생겼으니, 댓글 모듈도 붙일 수 있다<ul>
+<li>근데 부 서버로 fallback 되면 댓글을 사용할 수 없으므로…</li>
+<li>댓글 서버에 연결 가능할 때에만 댓글 창이 표시되도록 해야 할 듯.</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.r3mark.xyz/2019/07/05/project-abandon-gh-pages/" data-id="ck4l75qyp000fdge820bn5alx" class="article-share-link">공유</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/05/galaxy-s10-change-csc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">최신</strong>
+      <div class="article-nav-title">
+        
+          S10 계열 갤럭시 CSC 변경
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/05/asus-b150-coffelake-patch/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">이전</strong>
+      <div class="article-nav-title">ASUS B150M-A 마더보드에 커피레이크 CPU 설치기 (진행중)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">카테고리</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Flight/">Flight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">아카이브</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">12월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">9월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">8월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">7월 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">7월 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">5월 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">11월 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">10월 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">8월 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">최근 포스트</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/04/strandhogg-example/">Android Strandhogg 취약점 구동 예시</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/20/s10-or-newer-csc-change/">S10, 그 이상 기기들의 CSC 변경법 (작동 확인)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/03/bx8803-bx112/">BX8803/BX112 탑승기</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/05/galaxy-s10-change-csc/">S10 계열 갤럭시 CSC 변경</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/05/project-abandon-gh-pages/">개인 서버에 가동하는 블로그의 Github Pages 이중화 (프로젝트: 꼬와서GH-Pages에Jekyll안쓴다)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Kyujin Cho<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
